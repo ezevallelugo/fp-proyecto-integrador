@@ -13,6 +13,16 @@ body {
     padding: 5px 0;
     font-size: 14px;
 }
+.top-bar p {
+    width: 97%;
+    display: inline-block;
+}
+.top-bar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
 
 /* Navegación */
 .navbar {
@@ -49,6 +59,7 @@ body {
 
 /* Buscador */
 .search-container {
+    max-width: 198px;
     display: flex;
     align-items: center;
     background-color: #eafde6;
@@ -57,6 +68,7 @@ body {
 }
 
 .search-container input {
+    max-width: 156px;
     border: none;
     background: transparent;
     outline: none;
@@ -73,30 +85,90 @@ body {
     height: 20px;
 }
 
-/* Carrito e ingresar */
-.cart-login {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+@media (max-width: 432px) {
+    .logo img {
+        height: 30px;
+    }
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    .top-bar p {
+        width: 91%;
+    }
+    .top-bar{
+        display: flex;
+    }
+    .newsletter h2 {
+        font-size: 20px !important;
+    }
 }
 
-.cart-login img {
-    height: 24px;
+@media (max-width: 1040px) {
+    .nav-links {
+        display: none;
+    }
+    .search-container {
+        display: none;
+    }
+    .buttons img {
+        display: none;
+    }
+    .navbar {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .buttons {
+        justify-content: flex-end;
+    }
+    .buttons button {
+        padding: 8px 9px !important;
+        margin-right: 10px;
+        margin-left: 0% !important;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-icons {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 6%;
+    }
+    .footer-links {
+        
+        gap: 8% !important;
+    }
+}
+
+/* Carrito e ingresar */
+nav .buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 294px;
+}
+
+nav .buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    color: white;
     cursor: pointer;
 }
 
-.btn-ingresar {
-    background-color: #006C2E;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    display: inline-block;
-    text-align: center;
-    font-size: 16px;
+nav .buttons .register {
+    background-color: #fb923c;
 }
 
-.btn-ingresar:hover {
-    background-color: #004f1e;
+nav .buttons .login {
+    background-color: #047857;
+}
+
+.buttons img {
+    height: 29px;
+    cursor: pointer;
+    padding-left: 5%;
 }
