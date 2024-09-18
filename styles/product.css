@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+.product-detail {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-images {
+    width: 40%;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail-images img {
+    width: 80px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.product-info {
+    width: 50%;
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.current-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.original-price {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.discount {
+    font-size: 1rem;
+    color: red;
+}
+
+.product-description {
+    margin-bottom: 20px;
+}
+
+.product-options {
+    margin-bottom: 20px;
+}
+
+.color-options button,
+.size-options button,
+.quantity-btn,
+.add-to-cart-btn {
+    border: none;
+    cursor: pointer;
+}
+
+.color-option {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.size-option {
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    padding: 5px 10px;
+}
+
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.review-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 70%;
+    height: 100px;
+    padding: 10px;
+}
+
+.comment-btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.related-products {
+    padding: 20px;
+}
+
+.related-products h2 {
+    margin-bottom: 20px;
+}
+
+.related-product {
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.related-product img {
+    width: 100%;
+    height: auto;
+}
+
+.current-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+}
