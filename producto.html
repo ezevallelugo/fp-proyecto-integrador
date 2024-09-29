@@ -37,16 +37,16 @@
     <!-- Codigo para agregar -->
     <section class="product-detail">
         <div class="product-images">
-            <div class="main-image">
-                <img src="assets/product/remera-1.png" alt="Remera Vent Verde">
-            </div>
+            
             <div class="thumbnail-images">
                 <img src="assets/product/remera-2.png" alt="Remera Vent Verde - Thumbnail 1">
                 <img src="assets/product/remera-3.png" alt="Remera Vent Verde - Thumbnail 2">
                 <img src="assets/product/remera-4.png" alt="Remera Vent Verde - Thumbnail 3">
             </div>
+            <div class="main-image">
+                <img src="assets/product/remera-1.png" alt="Remera Vent Verde">
+            </div>
         </div>
-
         <div class="product-info">
             <h1>Remera Vent Verde</h1>
             <div class="price">
@@ -55,7 +55,7 @@
                 <span class="discount">-20%</span>
             </div>
             <p class="product-description">
-                La camiseta Vent es un básico de manga corta fabricado con una mezcla de algodón orgánico y reciclado...
+                La camiseta Vent es un básico de manga corta fabricado con una mezcla de algodón orgánico y reciclado.
             </p>
             <div class="product-options">
                 <div class="color-options">
@@ -80,16 +80,15 @@
             </div>
         </div>
     </section>
-
     <section class="product-details">
         <div class="tabs">
-            <button class="tab active">Descripción</button>
-            <button class="tab">Detalles</button>
-            <button class="tab">Envíos</button>
+            <button class="tab active" onclick="showContent('description')">Descripción</button>
+            <button class="tab" onclick="showContent('details')">Detalles</button>
+            <button class="tab" onclick="showContent('shipping')">Envíos</button>
         </div>
         <div class="tab-content">
             <p>
-                La camiseta Vent es un básico de manga corta fabricado con algodón orgánico y reciclado...
+                La camiseta Vent es un básico de manga corta fabricado con una mezcla de algodón orgánico y reciclado. El algodón orgánico aporta confort y transpirabilidad, mientras que el algodón reciclado refleja nuestro compromiso con la sostenibilidad al reducir la huella de carbono. Un esencial para quienes buscan estilo y ética en una sola prenda.
             </p>
             <ul>
                 <li>Tejido principal: 50% Algodón reciclado/ 50% Algodón orgánico</li>
@@ -101,34 +100,45 @@
             </ul>
         </div>
     </section>
-
     <section class="reviews">
         <h2>Opiniones</h2>
         <div class="review-form">
-            <textarea placeholder="Deja acá tu opinión..."></textarea>
+            <textarea row="1" placeholder="Deja acá tu opinión..."></textarea>
+            <br>
             <button class="comment-btn">Comentar</button>
         </div>
         <div class="review">
-            <p><strong>Pablo T.</strong></p>
             <p>★★★★★</p>
-            <p>“Siempre busco maneras de consumir de forma más sostenible...”</p>
+            <p><strong>Pablo T.</strong></p>
+            <p>“Siempre busco maneras de consumir de forma más sostenible, y me encanta saber que estoy eligiendo moda responsable sin sacrificar estilo. Ecodono no solo me permite encontrar prendas únicas, cada compra contribuye a un futuro más verde.”</p>
         </div>
     </section>
-
+    <h2 class="related-tittle">También te podría interesar</h2>
     <section class="related-products">
-        <h2>También te podría interesar</h2>
         <div class="related-product">
             <img src="assets/product/remera-verde.png" alt="Remera Vent Wash">
             <p>Remera Vent Wash</p>
             <span class="current-price">$40.000</span>
             <span class="original-price">$52.000</span>
+            <span class="discount">-20%</span>
         </div>
         <div class="related-product">
             <img src="assets/product/maletin.png" alt="Maletín camión">
             <p>Maletín camión</p>
             <span class="current-price">$80.000</span>
         </div>
-        <!-- Añade más productos relacionados aquí -->
+        <div class="related-product">
+            <img src="assets/product/remera-azul.png" alt="Remera Melti Azul Marino">
+            <p>Remera Melti Azul Marino</p>
+            <span class="current-price">$50.000</span>
+        </div>
+        <div class="related-product">
+            <img src="assets/product/zapatillas.png" alt="Sneaker Peckham Black Woman">
+            <p>Sneaker Black Woman</p>
+            <span class="current-price">$70.000</span>
+            <span class="original-price">$100.000</span>
+            <span class="discount">-30%</span>
+        </div>
     </section>
     <!-- Final del código -->
     <footer>
@@ -191,6 +201,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>
