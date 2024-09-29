@@ -81,25 +81,40 @@
         </div>
     </section>
     <section class="product-details">
+        <!-- Contenedor de los botones que alternan el contenido -->
         <div class="tabs">
+            <!-- Botón "Descripción" con clase "active" por defecto -->
             <button class="tab active" onclick="showContent('description')">Descripción</button>
+            <!-- Botón "Detalles" -->
             <button class="tab" onclick="showContent('details')">Detalles</button>
+            <!-- Botón "Envíos" -->
             <button class="tab" onclick="showContent('shipping')">Envíos</button>
         </div>
+        <!-- Contenedor donde se mostrará el contenido correspondiente según el botón seleccionado -->
         <div class="tab-content">
-            <p>
-                La camiseta Vent es un básico de manga corta fabricado con una mezcla de algodón orgánico y reciclado. El algodón orgánico aporta confort y transpirabilidad, mientras que el algodón reciclado refleja nuestro compromiso con la sostenibilidad al reducir la huella de carbono. Un esencial para quienes buscan estilo y ética en una sola prenda.
-            </p>
-            <ul>
-                <li>Tejido principal: 50% Algodón reciclado/ 50% Algodón orgánico</li>
-                <li>Fit regular</li>
-                <li>Cuello redondo</li>
-                <li>Manga corta</li>
-                <li>Logo ECOALF en la manga</li>
-                <li>Vegano</li>
-            </ul>
+            <!-- Contenido de la pestaña "Descripción", visible por defecto con la clase "active" -->
+            <div id="description" class="content active">
+                <p>
+                    La camiseta Vent es un básico de manga corta fabricado con una mezcla de algodón orgánico y reciclado. El algodón orgánico aporta confort y transpirabilidad, mientras que el algodón reciclado refleja nuestro compromiso con la sostenibilidad al reducir la huella de carbono. Un esencial para quienes buscan estilo y ética en una sola prenda.
+                </p>
+            </div>
+            <!-- Contenido de la pestaña "Detalles", oculto por defecto -->
+            <div id="details" class="content">
+                <ul>
+                    <li>Tejido principal: 50% Algodón reciclado / 50% Algodón orgánico</li>
+                    <li>Fit regular</li>
+                    <li>Cuello redondo</li>
+                    <li>Manga corta</li>
+                    <li>Logo ECOALF en la manga</li>
+                    <li>Vegano</li>
+                </ul>
+            </div>
+            <!-- Contenido de la pestaña "Envíos", oculto por defecto -->
+            <div id="shipping" class="content">
+                <p>Método de envío: Envío gratuito en compras superiores a $50.00. El tiempo estimado de entrega es de 5 a 7 días hábiles.</p>
+            </div>
         </div>
-    </section>
+    </section>    
     <section class="reviews">
         <h2>Opiniones</h2>
         <div class="review-form">
@@ -140,6 +155,7 @@
             <span class="discount">-30%</span>
         </div>
     </section>
+    <script src="scripts/index.js"></script>
     <!-- Final del código -->
     <footer>
         <div class="newsletter">
