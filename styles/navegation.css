@@ -7,6 +7,7 @@ body {
 
 /* Barra superior */
 .top-bar {
+    display: flex;
     background-color: #006C2E;
     color: white;
     text-align: center;
@@ -16,12 +17,15 @@ body {
 .top-bar p {
     width: 97%;
     display: inline-block;
+    font-size: 14px !important;
 }
 .top-bar button {
     background: none;
-    border: none;
     color: white;
     cursor: pointer;
+    border: none !important;
+    padding: 0 !important;
+    background-color: transparent !important;
 }
 
 /* Navegación */
@@ -32,6 +36,7 @@ body {
     padding: 15px 30px;
     background-color: white;
     border-bottom: 1px solid #f0f0f0;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .logo img {
@@ -79,6 +84,9 @@ body {
     background: transparent;
     border: none;
     cursor: pointer;
+    border: none !important;
+    padding: 0 !important;
+    background-color: transparent !important;
 }
 
 .search-container img {
@@ -146,8 +154,6 @@ body {
 nav .buttons {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    width: 294px;
 }
 
 nav .buttons button {
@@ -157,6 +163,16 @@ nav .buttons button {
     border-radius: 999px;
     color: white;
     cursor: pointer;
+    border: 1px solid black;
+}
+
+.search-container button {
+  
+        margin-left: 0;
+        padding: 0;
+        border-radius: 0;
+        border: none;
+    
 }
 
 nav .buttons .register {
@@ -165,6 +181,7 @@ nav .buttons .register {
 
 nav .buttons .login {
     background-color: #047857;
+    white-space: nowrap;
 }
 
 .buttons img {

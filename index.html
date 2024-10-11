@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECODONO</title>
     <link rel="stylesheet" href="styles/default.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body class="home">
     <header>
         <div class="top-bar">
             <p>Cuidemos nuestro único hogar y a nuestras personas</p><button>&times;</button>
@@ -26,29 +29,153 @@
                 <button><img src="assets/navegation/lupa.png" alt="Buscar"></button>
             </div>
             <div class="buttons">
-                
-                    <button href="#" class="register">Registrarse</button>
-                    <button href="#" class="login">Iniciar Sesion</button>
+
+                <button href="#" class="register">Registrarse</button>
+                <button href="#" class="login">Iniciar Sesion</button>
                 <img href="#" src="assets/navegation/carrito.png" alt="Carrito">
-                
+
             </div>
         </nav>
     </header>
-    <!-- Codigo para agregar -->
-    <h1>Home de la pagina</h1>
-    <!-- Final del código -->
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Vístete consciente, vive con propósito</h1>
+            <p>Únete al cambio hacia una moda más responsable. Descubre prendas únicas que no solo reflejan tu estilo,
+                sino también tu compromiso con los demás y el medio ambiente.</p>
+            <button href="#" class="cta-button">Encuentra tu prenda</button>
+            <div class="stats">
+                <div class="stat">
+                    <span>200+</span>
+                    <p>Usuarios</p>
+                </div>
+                <div class="stat">
+                    <span>500+</span>
+                    <p>Productos de alta calidad</p>
+                </div>
+                <div class="stat">
+                    <span class="infinity">∞</span>
+                    <p>Vidas cambiadas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="partners">
+        <img src="/assets/home/logo pescar.png" alt="Fundación Pescar">
+        <img src="assets/home/logo karuna.png" alt="Karuna Charitable Foundation">
+        <img src="assets/home/logo valtech.png" alt="Valtech">
+    </section>
+    <h2 class="title top-border">
+        Moda Sustentable a tu Alcance
+    </h2>
+
+
+    <div class="container">
+        <div id="product-grid-home" class="grid-home"></div>
+
+        <button href="#">Ver todos</button>
+
+    </div>
+
+    <script src="scripts/home-products.js"></script>
+
+    <h2 class="title">
+        Características que hacen la diferencia
+    </h2>
+
+    <p class="h3-description">Somos una plataforma dedicada a impulsar la economía circular, ofreciendo un espacio donde
+        las personas pueden comprar, vender, reciclar y dar nueva vida a productos de segunda mano. Creemos en el poder
+        de la reutilización y el upcycling para reducir el impacto ambiental y crear un cambio positivo. Nos enfocamos
+        en construir una comunidad consciente, comprometida con el consumo responsable y la sostenibilidad.</p>
+
+    <div class="boxes">
+        <div class="container-box">
+            <div class="item">
+                <img src="assets/home/box icon.png" alt="">
+                <h3>Compra y venta de productos reciclados</h3>
+                <p>Contribuye al medio ambiente mientras obtienes productos únicos.</p>
+            </div>
+            <div class="item">
+                <img src="assets/home/box icon.png" alt="">
+                <h3>Facilitamos donaciones para causas sostenibles</h3>
+                <p>Tu generosidad puede marcar una gran diferencia.</p>
+            </div>
+            <div class="item">
+                <img src="assets/home/box icon.png" alt="">
+                <h3>Servicios de recolección a tu disposición</h3>
+                <p>Hacemos que el reciclaje sea fácil y accesible.</p>
+            </div>
+        </div>
+
+        <button href="#">Descubre más sobre nosotros</button>
+    </div>
+
+    <h2 class="title">
+        Preguntas Frecuentes
+    </h2>
+
+    <section class="faq">
+        <div class="faq-container">
+            <article>
+                <h3>¿Cómo puedo donar?</h3>
+                <p>Puedes donar productos en nuestras ubicaciones designadas o programar una recolección a domicilio.
+                    Aceptamos una variedad de artículos, desde ropa hasta electrodomésticos. Tu donación puede hacer una
+                    gran diferencia.</p>
+            </article>
+
+            <article>
+                <h3>¿Qué productos se venden?</h3>
+                <p>Vendemos productos reciclados y de segunda mano en excelentes condiciones. Nuestro inventario incluye
+                    ropa, muebles y artículos electrónicos. Todos los productos son revisados antes de ser puestos a la
+                    venta.</p>
+            </article>
+
+            <article>
+                <h3>¿Cómo funciona la recolección?</h3>
+                <p>La recolección se puede programar a través de nuestro sitio web o por teléfono. Un equipo se
+                    encargará de recoger tus donaciones en la fecha acordada. Es una forma fácil de contribuir al
+                    reciclaje.</p>
+            </article>
+
+            <article>
+                <h3>¿Por qué reciclar productos?</h3>
+                <p>Comprar vestimenta de segunda mano es una opción económica y solidaria que contribuye
+                    significativamente a la sostenibilidad ambiental. Optar por ropa usada te permite encontrar piezas
+                    únicas a precios accesibles beneficiando tanto a la comunidad como al medio ambiente.</p>
+            </article>
+        </div>
+    </section>
+
+
+
+    <div class="testimonial-container">
+        <h2 class="title">Historias de Nuestra Comunidad</h2>
+        <div class="slider-container">
+            <button class="slider-button prev">&#8249;</button>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <!-- Testimonials will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <button class="slider-button next">&#8250;</button>
+        </div>
+    </div>
+    <script src="scripts/testimonials.js"></script>
+
+
     <footer>
         <div class="newsletter">
             <h2>Mantente informado por nuestro newsletter</h2>
             <div class="newsletter-form">
-                <input type="email" placeholder="Ingrese su correo">
+                <input class="email-input" type="email" placeholder="Ingrese su correo">
                 <button>Suscribirte al newsletter</button>
             </div>
         </div>
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="assets/footer/ecodono-logo.png" alt="ECODONO Logo">
-                <p>Reutilizamos productos para darles un nuevo uso y ofrecemos servicios para aportar un cuidado especial a nuestro planeta.</p>
+                <p>Reutilizamos productos para darles un nuevo uso y ofrecemos servicios para aportar un cuidado
+                    especial a nuestro planeta.</p>
                 <div class="social-icons">
                     <a href="#"><img src="assets/footer/twitter.png" alt="Twitter"></a>
                     <a href="#"><img src="assets/footer/facebook.png" alt="Facebook"></a>
@@ -97,6 +224,7 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
+
 </html>

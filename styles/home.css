@@ -1,0 +1,205 @@
+body.home button {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.home p {
+    font-size: 1.5rem;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('/assets/home/bg-hero.png') no-repeat center center/cover;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    min-height: 90vh;
+}
+
+.hero-content {
+    max-width: 660px;
+}
+
+.hero-content h1 {
+    font-size: 4.1rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    /*-webkit-text-stroke: 0.12rem black; Agrega un borde negro de 1px al texto, se arruina con monserrat*/
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.hero-content p {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.stat p {
+    color: white;
+    text-shadow: 0px 3px 4px black;
+}
+
+.stat span {
+    /* -webkit-text-stroke: 0.08rem black; */
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.infinity {
+    font-size: 5.5rem !important;
+
+    height: 37px;
+    top: -32px;
+    position: relative;
+}
+
+.cta-button {
+    font-size: 1.3rem;
+    display: inline-block;
+    background-color: #ff6f3d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 999px;
+    color: black;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+    position: relative;
+}
+
+.stat span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero-image img {
+    max-width: 500px;
+    height: auto;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-evenly;
+    width: 60rem;
+    margin: 0 auto;
+}
+
+.partners img {
+    max-width: 213px;
+    margin: 0 20px;
+}
+
+.title {
+    text-align: center;
+    padding: 3rem;
+    font-size: 3rem;
+    margin: 0;
+    color: black;
+}
+
+.top-border{
+    border-top: 1px solid black; 
+}
+
+.home button {
+    border-radius: 999px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 1rem;
+    display: inline-block;
+    background-color: #ff6f3d;
+    text-decoration: none;
+    padding: 19px 69px;
+}
+
+.h3-description {
+    margin: 0 11%;
+    text-align: center;
+}
+
+.boxes{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.container-box {
+    display: flex;            /* Hacer que el contenedor sea flex */
+    justify-content: space-between; /* Espacio entre los divs */
+    gap: 3rem;              /* Gap de 3 rem entre los divs */
+    padding: 4.5rem 3rem;          /* Opcional: padding del contenedor */
+}
+
+.item {
+    flex: 1;                /* Cada div tomará el mismo ancho */
+    padding: 1rem;          /* Espaciado interno del div */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    text-align: center;
+}
+
+.item h3{
+    font-size: 2rem;
+}
+
+.item p{
+    font-size: 1.25rem;
+}
+
+.item img{
+    height: 5.4rem;
+}
+
+.faq {
+    margin: 0 4%;
+    background-color: #E7FCDB;
+    border-radius: 40px;
+}
+
+.faq-container {
+   padding: 2.9rem 5rem;
+}
+
+.faq h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+.faq p {
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.faq article {
+    margin-bottom: 2rem;
+}
+
+.faq article:last-child {
+    margin-bottom: 0;
+  }
+
+.email-input {
+font-size: 1.25rem;
+}
