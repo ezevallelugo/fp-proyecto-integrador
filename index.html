@@ -49,31 +49,8 @@
         </ul>
     </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuIcon = document.querySelector('.menu-icon');
-            const navLinks = document.querySelector('.menu-links');
-
-            menuIcon.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
-
-            const topBarButton = document.querySelector('.top-bar button');
-            const topBar = document.querySelector('.top-bar');
-
-            topBarButton.addEventListener('click', function() {
-                topBar.style.display = 'none';
-            });
-
-            // Cierra el menú si se hace clic fuera de él
-            document.addEventListener('click', function(event) {
-                const isClickInsideNavbar = event.target.closest('.navbar');
-                if (!isClickInsideNavbar && navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-    </script>
+    <script src="scripts/navbar-menu.js"></script>
+    <script src="scripts/top-bar-close.js"></script>
 
     <div class="hero-section">
         <div class="hero-content">
