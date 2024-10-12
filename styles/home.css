@@ -163,7 +163,7 @@ body.home button {
     display: block;
     justify-content: space-between;
     align-items: center;
-    background: url('/assets/home/bg-hero.png') no-repeat center center/cover;
+    background: url('../assets/home/bg-hero.png') no-repeat center center/cover;
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
