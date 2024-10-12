@@ -2,39 +2,6 @@ body.home button {
     font-family: 'Montserrat', sans-serif !important;
 }
 
-.home p {
-    font-size: 1.5rem;
-}
-
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: url('/assets/home/bg-hero.png') no-repeat center center/cover;
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    min-height: 90vh;
-}
-
-.hero-content {
-    max-width: 660px;
-}
-
-.hero-content h1 {
-    font-size: 4.1rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    /*-webkit-text-stroke: 0.12rem black; Agrega un borde negro de 1px al texto, se arruina con monserrat*/
-    text-shadow: 
-    -1px -1px 0 black,  
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-}
-
 .hero-content p {
     color: black;
     margin-bottom: 20px;
@@ -75,17 +42,6 @@ body.home button {
     cursor: pointer;
 }
 
-.stats {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-.stat {
-    text-align: center;
-    position: relative;
-}
-
 .stat span {
     display: block;
     font-size: 2rem;
@@ -103,21 +59,14 @@ body.home button {
     align-items: center;
     padding: 20px;
     justify-content: space-evenly;
-    width: 60rem;
     margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .partners img {
     max-width: 213px;
     margin: 0 20px;
-}
-
-.title {
-    text-align: center;
-    padding: 3rem;
-    font-size: 3rem;
-    margin: 0;
-    color: black;
 }
 
 .top-border{
@@ -136,11 +85,6 @@ body.home button {
     padding: 19px 69px;
 }
 
-.h3-description {
-    margin: 0 11%;
-    text-align: center;
-}
-
 .boxes{
     text-align: center;
     padding-bottom: 3rem;
@@ -149,8 +93,158 @@ body.home button {
 .container-box {
     display: flex;            /* Hacer que el contenedor sea flex */
     justify-content: space-between; /* Espacio entre los divs */
-    gap: 3rem;              /* Gap de 3 rem entre los divs */
-    padding: 4.5rem 3rem;          /* Opcional: padding del contenedor */
+    gap: 0;              /* Gap de 3 rem entre los divs */
+    padding: 2.5rem 0rem;          /* Opcional: padding del contenedor */
+    flex-direction: column;
+}
+
+.item h3{
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.title {
+    text-align: center;
+    padding: 2.3rem 1rem;
+    font-size: 2rem;
+    margin: 0;
+    color: black;
+}
+
+.secondtitle-description {
+    margin: 0 5%;
+    text-align: center;
+}
+
+.home p {
+    font-size: 1.25rem;
+}
+
+.faq-container {
+    padding: 0.9rem 1rem;
+ }
+
+ .faq h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.partners img:last-child {
+    margin-top: 0.5rem;
+}
+
+.hero-content h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    /*-webkit-text-stroke: 0.12rem black; Agrega un borde negro de 1px al texto, se arruina con monserrat*/
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+     text-align: center;
+}
+
+.hero-content {
+    max-width: 660px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-section {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    background: url('/assets/home/bg-hero.png') no-repeat center center/cover;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 90vh;
+
+    align-content: center;
+}
+
+.hero-content p {
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+    position: relative;
+    flex: 1 1 200px;
+}
+
+
+@media (min-width: 900px) {
+    .container-box {
+        flex-direction: row;
+        gap: 3rem;
+        padding: 4.5rem 3rem;
+    }
+    .item h3{
+        margin: 32px 0;
+    }
+    .title {
+        padding: 3rem;
+        font-size: 3rem;
+    }
+
+    .h3-description {
+        margin: 0 11%;
+    }
+
+    .home p {
+        font-size: 1.5rem;
+    }
+    
+    .faq-container {
+        padding: 2.9rem 5rem;
+     }
+
+     .faq h3 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 4.1rem;
+        text-align: left;
+    }
+
+    .hero-content {
+       margin: 0 0;
+       text-align: start;
+    }
+
+    .hero-content p {
+        text-align: left;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .stat {
+        flex: 0 1 auto;
+    }
 }
 
 .item {
@@ -178,15 +272,6 @@ body.home button {
     border-radius: 40px;
 }
 
-.faq-container {
-   padding: 2.9rem 5rem;
-}
-
-.faq h3 {
-    font-size: 2rem;
-    margin: 0;
-    font-weight: bold;
-}
 .faq p {
     margin: 0;
     padding-top: 1rem;

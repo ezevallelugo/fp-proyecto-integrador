@@ -4,7 +4,7 @@ const productos = [
         precio: 3500, 
         descuento: null, 
         calificacion: 4.5, 
-        imagen: "assets/home/product-placeholder.png"
+        imagen: "assets/home/product-placeholder-0.png"
     },
     { 
         nombre: "Jean Ajustado", 
@@ -12,14 +12,14 @@ const productos = [
         precioViejo: 9000, 
         descuento: 20, 
         calificacion: 3.5, 
-        imagen: "assets/home/product-placeholder.png"
+        imagen: "assets/home/product-placeholder-1.png"
     },
     { 
         nombre: "Camisa a Cuadros", 
         precio: 8000, 
         descuento: null, 
         calificacion: 4.5, 
-        imagen: "assets/home/product-placeholder.png"
+        imagen: "assets/home/product-placeholder-2.png"
     },
     { 
         nombre: "Remera con Rayas", 
@@ -27,7 +27,7 @@ const productos = [
         precioViejo: 4000, 
         descuento: 30, 
         calificacion: 4.5, 
-        imagen: "assets/home/product-placeholder.png"
+        imagen: "assets/home/product-placeholder-3.png"
     },
     { 
         nombre: "Camisa Rayas Verticales", 
@@ -35,28 +35,28 @@ const productos = [
         precioViejo: 7000, 
         descuento: 20, 
         calificacion: 5, 
-        imagen: "assets/home/product-placeholder.png"
+        imagen: "assets/home/product-placeholder-4.png"
     },
     { 
         nombre: "Courage Remera Gráfica", 
         precio: 4500, 
         descuento: null, 
         calificacion: 4, 
-        imagen: "assets/home/product-placeholder.png"
+        imagen: "assets/home/product-placeholder-5.png"
     },
     { 
         nombre: "Bermuda Suelta", 
         precio: 7000, 
         descuento: null, 
         calificacion: 3, 
-        imagen: "assets/home/product-placeholder.png"
+        imagen: "assets/home/product-placeholder-6.png"
     },
     { 
         nombre: "Jean Ajustado Desgastado", 
         precio: 10000, 
         descuento: null, 
         calificacion: 4.5, 
-        imagen: "assets/home/product-placeholder.png"
+        imagen: "assets/home/product-placeholder-7.png"
     }
 ];
 

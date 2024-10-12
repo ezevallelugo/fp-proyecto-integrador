@@ -89,8 +89,16 @@ h1 {
     right: 2%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1067px) {
     .testimonial-card {
         flex: 0 0 100%;
     }
+
+.testimonial-container{
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 3rem;
+}
+
 }
