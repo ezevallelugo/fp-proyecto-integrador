@@ -1,14 +1,25 @@
 /* Estilos del footer */
 footer {
-    background-color: #EAFDE6;
+    background: linear-gradient(to bottom, transparent 22%, #EAFDE6 0%);
     padding: 20px 30px;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.footer{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 0;
+    padding-bottom: 4rem;
+}
+
+.footer-logo{
+    max-width: 48rem;
 }
 
 .newsletter {
     background-color: #006C2E;
     padding: 30px 30px;
-    border-radius: 20px;
+    border-radius: 30px;
     border: none;
     text-align:center;
     color: white;
@@ -30,6 +41,7 @@ footer {
     border-radius: 30px;
     border: none;
     width: 300px;
+    font-size: 1.5rem;
 }
 
 .newsletter-form button {
@@ -49,6 +61,7 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    gap: 2rem;
 }
 
 .footer-logo img {
@@ -56,18 +69,26 @@ footer {
 }
 
 .footer-logo p {
-    font-size: 14px;
+    font-size: 1.1rem !important;
     margin: 20px 0;
 }
 
 .social-icons a img {
-    height: 24px;
-    margin-right: 10px;
+    height: 4rem;
+    margin: 0 4px;
 }
 
 .footer-links {
     display: flex;
-    gap: 50px;
+    gap: 1rem;
+    flex-wrap: nowrap; /* Mantiene los elementos en una sola línea */
+    
+}
+
+.footer-links > div {
+    flex: 0 0 170px; /* Establece un ancho fijo de 170px */
+    min-width: 170px; /* Asegura que los bloques no se aplasten por debajo de 170px */
+    max-width: 170px; /* Establece el ancho máximo también en 170px */
 }
 
 .footer-links h3 {
@@ -105,10 +126,96 @@ footer {
 }
 
 .footer-bottom p {
+
+    font-size: 1.1rem !important;
     margin: 0;
 }
 
 .payment-methods img {
-    height: 30px;
+    max-height: 50px;
     margin-left: 10px;
+}
+
+.payment-methods-small img {
+    max-height: 50px;
+    margin-left: 10px;
+}
+
+@media (max-width: 1330px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-logo{
+        max-width: 100% !important;
+    }
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .footer{
+        padding: 0;
+    }
+    .newsletter h2{
+        font-size: 1.8rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    footer{
+        background: linear-gradient(to bottom, transparent 16%, #EAFDE6 0%);
+    }
+}
+
+@media (max-width: 930px) {
+    .payment-methods{
+        display: none;
+    }
+    .footer-bottom{
+        justify-content: center;
+    }
+    .payment-methods-small{
+        display: block !important;
+    }
+    .footer-bottom p{
+        text-align: center;
+    }
+}
+
+.payment-methods-small{
+    display: none;
+}
+
+@media (max-width: 420px) {
+    footer{
+        padding: 20px 0.5rem;
+    }
+    .payment-methods-small img{
+        max-height: 43px;
+    }
+    .social-icons a img{
+        height: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .newsletter-form{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+    .newsletter-form button{
+        width: fit-content;
+        padding: 10px 20px !important;
+        white-space: nowrap;
+    }
+    .newsletter-form input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px) {
+    footer{
+        background: linear-gradient(to bottom, transparent 11%, #EAFDE6 0%);
+    }
 }
