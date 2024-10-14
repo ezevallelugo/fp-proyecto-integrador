@@ -26,17 +26,20 @@
     margin-bottom: 10px;
 }
 
-.filter-price .price-range {
+.filter-price {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.filter-price input[type="range"] {
     width: 100%;
     margin: 10px 0;
 }
 
-.filter-price .price-values {
-    display: flex;
-    justify-content: space-between;
-}
-
-.apply-filter {
+.applyFilter {
     width: 100%;
     padding: 10px;
     background-color: black;
@@ -48,15 +51,7 @@
 }
 
 .product-list {
-    width: 80%;
-}
-
-.product-list h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.product-grid {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;

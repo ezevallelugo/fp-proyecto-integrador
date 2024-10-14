@@ -1,28 +1,59 @@
-// Obtener elementos del DOM
-const rangeInput = document.getElementById('.price-range');
-const minPriceLabel = document.getElementById('min-price');
-const maxPriceLabel = document.getElementById('max-price');
-const applyFilterButton = document.querySelector('.apply-filter');
-const productos = document.querySelectorAll('.producto');
-// Actualizar el valor del precio máximo visualmente cuando se mueva el control deslizante
-rangeInput.addEventListener('input', function() {
-    maxPriceLabel.textContent = `$${Number(rangeInput.value).toLocaleString()}`;
-});
-// Función para aplicar el filtro de precios
-function aplicarFiltro() {
-    const maxPrecio = parseInt(rangeInput.value);
-    console.log("Entro e hizo click");
-    productos.forEach(producto => {
-        const precioProducto = parseInt(producto.getAttribute('data-precio'));
-        // Mostrar u ocultar productos según el filtro
-        if (precioProducto <= maxPrecio) {
-            producto.style.display = 'block';  // Mostrar productos dentro del rango
-            console.log("Muestra");
-        } else {
-            producto.style.display = 'none';  // Ocultar productos fuera del rango
-            console.log("No muestra");
-        }
+// Lista de productos
+const products = [
+    { name: "Remera Vent Verde", price: 15, img: "assets/catalog/remera-1.png", link: "producto.html" },
+    { name: "Bolso CICA Neumático negro", price: 35, img: "assets/catalog/bolso.png", link: "producto.html" },
+    { name: "Jerséi de lana reciclada", price: 25, img: "assets/catalog/jersei.png", link: "producto.html" },
+    { name: "Sneaker Spandau Navy Man", price: 30, img: "assets/catalog/zapatillas-1.png", link: "producto.html" },
+    { name: "Pantalones Cargo Ethica Azules", price: 27, img: "assets/catalog/pantalones.png", link: "producto.html" },
+    { name: "Remera azul", price: 15, img: "assets/catalog/remera-azul.png", link: "producto.html" },
+    { name: "Camiseta Francisca blanca", price: 15, img: "assets/catalog/musculosa.png", link: "producto.html" },
+    { name: "Sneaker Corsocomo Woman", price: 30, img: "assets/catalog/zapatillas-2.png", link: "producto.html" },
+    { name: "Bandolera Frodo L", price: 30, img: "assets/catalog/bandolera.png", link: "producto.html" },
+    { name: "Pantalones cortos Beige", price: 20, img: "assets/catalog/bermuda.png", link: "producto.html" },
+    // Añade más productos aquí
+];
+
+// Seleccionar el catálogo donde se mostrarán los productos
+const catalog = document.querySelector('.product-list');
+
+// Función para generar el catálogo de productos
+function renderProducts(products) {
+    catalog.innerHTML = '';  // Limpiar el catálogo
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('product');
+        productDiv.innerHTML = `
+            <a href="${product.link}">
+                <img src="${product.img}" alt="${product.name}">
+                <h2>${product.name}</h2>
+            </a>
+            <p>$${product.price.toFixed(3)}</p>
+        `;
+        catalog.appendChild(productDiv);
     });
 }
-// Agregar el evento al botón "Aplicar filtro"
-applyFilterButton.addEventListener('click', aplicarFiltro);
+
+// Renderizar los productos al cargar la página
+renderProducts(products);
+
+// Funcionalidad de filtro de precios
+const priceRange = document.getElementById('priceRange');
+const priceValue = document.getElementById('priceValue');
+const applyFilterBtn = document.getElementById('applyFilter');
+
+// Actualizar el texto del rango de precio seleccionado
+priceValue.textContent = `$0 - $${priceRange.value}`;
+
+priceRange.addEventListener('input', () => {
+    priceValue.textContent = `$0 - $${priceRange.value}`;
+});
+
+// Aplicar el filtro cuando se hace clic en el botón
+applyFilterBtn.addEventListener('click', () => {
+    const maxPrice = parseInt(priceRange.value);
+
+    // Filtrar productos por precio y renderizar
+    const filteredProducts = products.filter(product => product.price <= maxPrice);
+    renderProducts(filteredProducts);
+});
+

@@ -45,9 +45,7 @@
             <li><img src="assets/navegation/carrito.svg" alt="Carrito" class="cart-icon"></li>
         </ul>
     </header>
-
     <script src="scripts/top-bar-close.js"></script>
-
     <!-- Codigo para agregar -->
     <section class="catalog">
         <aside class="filters">
@@ -63,11 +61,8 @@
             </div>
             <div class="filter-price">
                 <h4>Precio</h4>
-                <input type="range" min="10000" max="200000" value="100000" class="price-range">
-                <div class="price-values">
-                    <span>$10.000</span>
-                    <span>$200.000</span>
-                </div>
+                <label for="priceRange">Desde - Hasta: <span id="priceValue"></span></label>
+                <input type="range" id="priceRange" min="0" max="100000" step="1" value="100000">
             </div>
             <div class="filter-material">
                 <h4>Material</h4>
@@ -82,80 +77,13 @@
                         <label for="camaras">Cámaras de neumático</label></li>
                 </ul>
             </div>
-            <button class="apply-filter">Aplicar filtro</button>
+            <button class="applyFilter" id="applyFilter">Aplicar filtro</button>
         </aside>
         <div class="product-list">
-            <h2>Productos</h2>
-            <div class="product-grid">
-                <div class="product" data-precio="60000">
-                    <a href="producto.html">
-                        <img src="assets/catalog/remera-1.png" alt="Remera Vent Verde">
-                        <p>Remera Vent Verde</p>
-                    </a>
-                    <p>$60.000 <span class="discount">$80.000</span> <span class="percentage">-20%</span></p>
-                </div>
-                <div class="product" data-precio="60000">
-                    <a href="producto.html">
-                        <img src="assets/catalog/bolso.png" alt="Bolso CICA Neumático negro">
-                        <p>Bolso CICA Neumático negro</p>
-                        <p>$60.000</p>
-                    </a>
-                </div>
-                <div class="product" data-precio="40000">
-                    <img src="assets/catalog/jersei.png" alt="Jerséi de lana reciclada">
-                    <p>Jerséi de lana reciclada</p>
-                    <p>$40.000</p>
-                </div>
-                <div class="product" data-precio="60000">
-                    <img src="assets/catalog/zapatillas-1.png" alt="Sneaker Spandau Navy Man">
-                    <p>Sneaker Spandau Navy Man</p>
-                    <p>$60.000 <span class="discount">$120.000</span> <span class="percentage">-50%</span></p>
-                </div>
-                <div class="product" data-precio="50000">
-                    <img src="assets/catalog/pantalones.png" alt="Pantalones Cargo Ethica Azules">
-                    <p>Pantalones Cargo Ethica Azules</p>
-                    <p>$50.000 <span class="discount">$80.000</span> <span class="percentage">-20%</span></p>
-                </div>
-                <div class="product" data-precio="40000">
-                    <img src="assets/catalog/remera-azul.png" alt="Remera Azul">
-                    <p>Remera azul</p>
-                    <p>$40.000</p>
-                </div>
-                <div class="product" data-precio="30000">
-                    <img src="assets/catalog/musculosa.png" alt="Camiseta Francisca blanca">
-                    <p>Camiseta Francisca blanca</p>
-                    <p>$30.000 <span class="discount">$60.000</span> <span class="percentage">-50%</span></p>
-                </div>
-                <div class="product" data-precio="12000">
-                    <img src="assets/catalog/zapatillas-2.png" alt="Sneaker Corsocomo Woman ">
-                    <p>Sneaker Corsocomo Woman </p>
-                    <p>$12.000 <span class="discount">$32.000</span> <span class="percentage">-60%</span></p>
-                </div>
-                <div class="product" data-precio="45000">
-                    <img src="assets/catalog/bandolera.png" alt="Bandolera Frodo L">
-                    <p>Bandolera Frodo L</p>
-                    <p>$45.000</p>
-                </div>
-                <div class="product" data-precio="40000">
-                    <img src="assets/catalog/bermuda.png" alt="Pantalones cortos Beige">
-                    <p>Pantalones cortos Beige</p>
-                    <p>$40.000</p>
-                </div>
-            </div>
-            <div class="pagination">
-                <button class="previous">Anterior</button>
-                <ul>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
-                <button class="next">Siguiente</button>
-            </div>
         </div>
     </section>
     <!-- Final del código -->
     <footer>
-        
         <div class="footer">
             <div class="newsletter">
                 <h2>MANTENTE INFORMADO POR NUESTRO NEWSLETTER</h2>
