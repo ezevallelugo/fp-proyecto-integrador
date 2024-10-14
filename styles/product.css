@@ -16,7 +16,7 @@ body {
 
 .main-image {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .main-image img {
     max-width: 100%;
@@ -25,6 +25,7 @@ body {
 .thumbnail-images {
     display: flex;
     flex-direction: column;
+    margin-left: 180px;
 }
 .thumbnail-images img {
     height: auto;
@@ -36,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
+    margin-left: 50px;
 }
 
 .product-info h1 {
@@ -65,52 +67,94 @@ body {
 .discount {
     font-size: 1rem;
     color: red;
+    background-color: rgb(255, 195, 195);
+    border-radius: 20px;
 }
 
 .product-description {
     margin-bottom: 20px;
 }
 
-.product-options {
-    margin-bottom: 20px;
+/* Contenedor principal para los botones */
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.color-options button,
-.size-options button,
-.quantity-btn,
-.add-to-cart-btn {
-    border-radius: 62px;
-    margin-bottom: 15px;
+/* Botones circulares para selección de color */
+.color-selection {
+    display: flex;
+    gap: 10px;
+}
+
+.color-selection .color-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
     cursor: pointer;
 }
 
-.color-option {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    margin-right: 5px;
+.color-selection .color-button.selected {
+    border-color: #000; /* Cambia este color al del borde para el color seleccionado */
 }
 
-.size-option {
-    padding: 10px;
-    margin-right: 5px;
+/* Estilos de ejemplo para los colores (personaliza según los colores reales) */
+.color-button.brown { background-color: #6F4E37; }
+.color-button.green { background-color: #2E4D4B; }
+.color-button.blue { background-color: #3A4C67; }
+
+/* Botones de selección de talla */
+.size-selection {
+    display: flex;
+    gap: 10px;
 }
 
-.quantity {
+.size-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border: none;
+}
+
+.size-button.selected {
+    background-color: #000;
+    color: white;
+}
+
+/* Botones de cantidad */
+.quantity-selection {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-.quantity-btn {
-    padding: 5px 10px;
+.quantity-selection .quantity-button {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
 }
 
-.add-to-cart-btn {
-    padding: 10px 20px;
+.quantity-selection .quantity-display {
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+/* Botón de añadir al carrito */
+.add-to-cart-button {
     background-color: black;
     color: white;
-    font-size: 1rem;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
 }
+
 /* Estilo para centrar todo el contenido de la sección */
 .product-details {
     display: flex;
