@@ -46,8 +46,8 @@ function applyFilters() {
         filteredProducts = filteredProducts.filter(product => product.category === selectedCategory);
     }
 
-    // Si se seleccionó un rango de precios, filtrar por precio
-    if (selectedPrice) {
+    // Si se seleccionó un rango de precios, filtrar por precio dentro de la categoría
+    if (selectedPrice && selectedCategory) {
         filteredProducts = filteredProducts.filter(product => product.price <= selectedPrice);
     }
 
@@ -66,7 +66,12 @@ categoryLinks.forEach(link => {
         // Obtiene la categoría seleccionada
         selectedCategory = link.textContent.trim().toLowerCase();
 
-        // Aplica filtros (si se ha seleccionado un precio, se mantendrá el filtro de precio)
+        // Reiniciar el filtro de precio
+        selectedPrice = null;
+        priceRange.value = priceRange.max; // Restablecer el control de rango de precios
+        priceValue.textContent = `$0 - $${priceRange.max}`; // Actualizar el texto del precio
+
+        // Aplica el filtro solo por categoría
         applyFilters();
     });
 });
@@ -83,12 +88,16 @@ priceRange.addEventListener('input', () => {
     priceValue.textContent = `$0 - $${priceRange.value}`;
 });
 
-// Aplica el filtro de precio cuando se hace click en el botón
+// Aplica el filtro de precio cuando se hace clic en el botón
 applyFilterBtn.addEventListener('click', () => {
     selectedPrice = parseInt(priceRange.value); // Almacenar el rango de precio seleccionado
 
-    // Aplica filtros (si se ha seleccionado una categoría, se mantendrá el filtro de categoría)
-    applyFilters();
+    // Solo aplicar filtro de precios si hay una categoría seleccionada
+    if (selectedCategory) {
+        applyFilters(); // Aplicar el filtro de categoría y precios combinados
+    } else {
+        alert('Por favor, selecciona una categoría primero.');
+    }
 });
 
 /******************Renderizado inicial de productos*************************/
