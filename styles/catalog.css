@@ -26,6 +26,68 @@
     margin-bottom: 10px;
 }
 
+/* Estilos generales de la lista */
+.filter-category ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+.filter-category li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces */
+.filter-category a {
+    text-decoration: none; /* Elimina la subrayada */
+    color: grey; /* Cambia el color del texto a gris */
+    font-size: 16px; /* Tamaño de fuente ajustable */
+    transition: color 0.3s ease;
+}
+
+/* Estilo para el enlace seleccionado */
+.filter-category a.selected {
+    color: black; /* Color negro para el enlace seleccionado */
+}
+
+/* Opcional: Cambia el color cuando el enlace es hover (al pasar el cursor) */
+.filter-category a:hover {
+    color: black; /* Cambia a negro cuando se pasa el mouse */
+}
+
+
+/* Estilo general de los botones */
+.filter-material ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.filter-material li {
+    margin-bottom: 10px;
+}
+
+/* Oculta los checkboxes por defecto */
+.filter-material input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilos para los labels que actuarán como botones */
+.filter-material label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(221, 219, 219); /* Color gris por defecto */
+    color: rgb(0, 0, 0);
+    border-radius: 20px; /* Aspecto ovalado */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color a negro cuando el checkbox esté seleccionado */
+.filter-material input[type="checkbox"]:checked + label {
+    background-color: black;
+    color: white;
+}
+
+
 .filter-price {
     width: 300px;
     padding: 20px;

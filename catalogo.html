@@ -59,11 +59,6 @@
                     <li><a href="#" data-category="accesorios">Accesorios</a></li>
                 </ul>
             </div>
-            <div class="filter-price">
-                <h4>Precio</h4>
-                <label for="priceRange">Desde - Hasta: <span id="priceValue"></span></label>
-                <input type="range" id="priceRange" min="0" max="100.000" step="1" value="100.000">
-            </div>
             <div class="filter-material">
                 <h4>Material</h4>
                 <ul>
@@ -77,7 +72,12 @@
                         <label for="camaras">Cámaras de neumático</label></li>
                 </ul>
             </div>
-            <button class="applyFilter" id="applyFilter">Aplicar filtro</button>
+            <div class="filter-price">
+                <h4>Precio</h4>
+                <label for="priceRange">Desde - Hasta: <span id="priceValue"></span></label>
+                <input type="range" id="priceRange" min="0" max="100000" step="1" value="100000">
+                <button class="applyFilter" id="applyFilter">Aplicar filtro</button>
+            </div>
         </aside>
         <div class="product-list">
         </div>
