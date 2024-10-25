@@ -98,8 +98,10 @@ function applyFilters() {
     }
 
     // Filtrar por rango de precio si hay uno seleccionado
-    if (selectedPrice) {
-        initialProducts = initialProducts.filter(product => product.price <= selectedPrice);
+    if (selectedMinPrice !== undefined && selectedMaxPrice !== undefined) {
+        initialProducts = initialProducts.filter(product =>
+            product.price >= selectedMinPrice && product.price <= selectedMaxPrice
+        );
     }
 
     // Filtrar por materiales si hay uno o más seleccionados
@@ -132,10 +134,11 @@ categoryLinks.forEach(link => {
         selectedCategory = link.textContent.trim().toLowerCase();
 
         // Reinicia el filtro de precio y material
-        selectedPrice = null;
+        selectedMinPrice = undefined;
+        selectedMaxPrice = undefined;
         selectedMaterials = [];
-        priceRange.value = priceRange.max; // Restablecer el control de rango de precios
-        priceValue.textContent = `$0 - $${priceRange.max}`; // Actualizar el texto del precio
+        minPriceInput.value = '';
+        maxPriceInput.value = '';
 
         // Aplica el filtro solo por categoría
         applyFilters();
@@ -143,22 +146,23 @@ categoryLinks.forEach(link => {
 });
 
 /******************Filtro por precios***************************************/
-// Rango de precios y botón de aplicar filtro
-const priceRange = document.getElementById('priceRange');
-const priceValue = document.getElementById('priceValue');
+// Entradas de precio mínimo y máximo y botón de aplicar filtro
+const minPriceInput = document.getElementById('price-min');
+const maxPriceInput = document.getElementById('price-max');
 const applyFilterBtn = document.getElementById('applyFilter');
-
-// Actualiza el texto del rango de precio seleccionado
-priceValue.textContent = `$0 - $${priceRange.value}`;
-
-priceRange.addEventListener('input', () => {
-    priceValue.textContent = `$0 - $${priceRange.value}`;
-});
 
 // Aplica el filtro de precio cuando se hace clic en el botón
 applyFilterBtn.addEventListener('click', () => {
-    selectedPrice = parseInt(priceRange.value); // Almacenar el rango de precio seleccionado
-    applyFilters(); // Aplicar filtros combinados
+    const minPrice = parseFloat(minPriceInput.value) || 0;
+    const maxPrice = parseFloat(maxPriceInput.value) || Infinity;
+
+    if (minPrice <= maxPrice) {
+        selectedMinPrice = minPrice;
+        selectedMaxPrice = maxPrice;
+        applyFilters();
+    } else {
+        alert("Por favor, asegúrate de que el precio mínimo no sea mayor al máximo.");
+    }
 });
 
 /******************Filtro por materiales************************************/
