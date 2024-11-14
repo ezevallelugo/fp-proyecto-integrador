@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/loginStyle/loginDefault.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../scripts/login/login.js" defer></script>
+    <script src="../scripts/login/signUp.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="sign-up">
+            <form class="register" novalidate>
+                <h1>Crear cuenta</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div>
+                    <label>
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="txt" placeholder="Name">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email">
+                      </label>
+                </div>
+                <div>
+                    <label>
+                        <i class="fa-solid fa-lock"></i>
+                        <input  type="password" name="pswd" placeholder="Password">
+                       </label>
+                </div>
+                <input type="submit" value="Registrarse">
+            </form>
+            
+        </div>
+        <div class="sign-in">
+            <form class="sign"action="#" novalidate>
+                <h1>Iniciar Sesión</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>o usa tu cuenta</p>
+                <div>
+                    <label>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" >
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="pswd" placeholder="Password" required="">
+                    </label>
+                </div>
+                   <a href="#">Forget your Password?</a>
+                <button class="iniciar-sesion">Iniciar Sesion</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-left">
+                    <h1>Bienvenido de vuelta!</h1>
+                    <p>Para seguir ayudando a cuidar nuestro ambiente inicie sesion</p>
+                    <button id="signIn">Iniciar Sesion</button>
+                </div>
+                <div class="overlay-right">
+                    <h1>Bienvenido !!</h1>
+                    <p>Para seguir ayudando a cuidar nuestro ambiente registrese</p>
+                    <button id="signUp">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>
