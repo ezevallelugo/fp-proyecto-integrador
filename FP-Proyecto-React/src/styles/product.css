@@ -1,0 +1,302 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+.product-detail {
+    display: flex;
+}
+
+.product-images {
+    display: flex;
+    width: 40%;
+}
+
+.main-image {
+    flex: 1;
+    margin-left: 10px;
+}
+.main-image img {
+    max-width: 100%;
+}
+
+.thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+}
+.thumbnail-images img {
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 50px;
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.current-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.original-price {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.discount {
+    font-size: 1rem;
+    color: red;
+    background-color: rgb(255, 195, 195);
+    border-radius: 20px;
+}
+
+.product-description {
+    margin-bottom: 20px;
+}
+
+/* Contenedor principal para los botones */
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Botones circulares para selección de color */
+.color-selection {
+    display: flex;
+    gap: 10px;
+}
+
+.color-selection .color-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.color-selection .color-button.selected {
+    border-color: #000; /* Cambia este color al del borde para el color seleccionado */
+}
+
+/* Estilos de ejemplo para los colores (personaliza según los colores reales) */
+.color-button.brown { background-color: #6F4E37; }
+.color-button.green { background-color: #2E4D4B; }
+.color-button.blue { background-color: #3A4C67; }
+
+/* Botones de selección de talla */
+.size-selection {
+    display: flex;
+    gap: 10px;
+}
+
+.size-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border: none;
+}
+
+.size-button.selected {
+    background-color: #000;
+    color: white;
+}
+
+/* Botones de cantidad */
+.quantity-selection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-selection .quantity-button {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.quantity-selection .quantity-display {
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+/* Botón de añadir al carrito */
+.add-to-cart-button {
+    background-color: black;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Estilo para centrar todo el contenido de la sección */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Esconde todas las secciones de contenido por defecto */
+.tab-content .content {
+    display: none;
+}
+
+/* Muestra solo la sección que tenga la clase 'active' */
+.tab-content .content.active {
+    display: block;
+}
+
+/* Estilo para los botones - centrados */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada botón */
+.tabs .tab {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    border: none;
+    font-size: 16px;
+}
+
+/* Botón activo */
+.tabs .tab.active {
+    background-color: #006C2E;
+    color: white;
+    font-weight: bold;
+}
+
+/* Ajuste del tamaño máximo del contenido para que no sea demasiado ancho */
+.tab-content {
+    max-width: 800px; /* Ajusta este valor para definir el ancho máximo del contenido */
+    width: 100%;
+    padding: 0 20px; /* Añade espacio lateral */
+    margin: 0 auto; /* Centra el contenido dentro del ancho definido */
+}
+
+/* Texto dentro de las secciones de contenido */
+.tab-content p, 
+.tab-content ul {
+    text-align: left;
+    margin-left: 20px; /* Ajusta este margen según lo necesites */
+    /* Puedes modificar 'margin-left' para crear más espacio a la izquierda */
+}
+/* Opcional: Ajusta el ancho del texto si lo deseas */
+.tab-content p {
+    max-width: 100%/* Ajusta este valor para controlar el ancho del párrafo */
+}
+
+/* Lista alineada a la izquierda */
+.tab-content ul {
+    max-width: 100%; /* Ajusta este valor para controlar el ancho de la lista */
+}
+
+.reviews h2 {
+    text-align: center; /* Alinear el título a la izquierda */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.review-form {
+    width: 80%; /* Mismo ancho que el texto anterior */
+    margin: 20px auto; /* Centrar y agregar espacio superior/inferior */
+    padding: 10px; /* Espacio interno para el contenido */
+    border: 1px solid #ccc; /* Opcional: borde para delimitar la caja */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle más definición */
+}
+
+.review {
+    width: 80%; /* Mismo ancho que el texto anterior */
+    margin: 20px auto; /* Centrar y agregar espacio superior/inferior */
+    padding: 10px; /* Espacio interno para el contenido */
+    border: 1px solid #ccc; /* Opcional: borde para delimitar la caja */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle más definición */
+}
+
+textarea {
+    width: 99%;
+    height: 100px;
+    resize: none;
+}
+
+.comment-btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.related-products {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+.related-tittle {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center; 
+    margin: 0; 
+}
+
+.related-product {
+    text-align: center; 
+    width: 200px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.related-product img {
+    width: 100%;
+    height: auto;
+}
+
+.current-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import url('../styles/navegation.css');
+@import url('../styles/footer.css');
+@import url('../styles/catalog.css');
+@import url('../styles/product.css');
+@import url('../styles/home.css');
+@import url('../styles/home-products.css');
+@import url('../styles/home-testimonials.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+}
+
+.main-container {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
