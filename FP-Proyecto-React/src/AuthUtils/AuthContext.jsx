@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
     setIsAuthenticated(false);
 
-    if (location.pathname !== '/login' && location.pathname !== '/register' && location.pathname !== '/' && location.pathname !== '/home') {
+    if (location.pathname !== '/login' && location.pathname !== '/' && location.pathname !== '/home') {
       navigate('/login', {
         replace: true,
         state: { from: location.pathname }
