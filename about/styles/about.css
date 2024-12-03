@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, .services, .features, .history {
+    background-color: #f0f4ec;
+}
+
+
+header {
+    background-color: #e3f2fd;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* ----- Presentación/logo completo de Ecodono */
+
+.container-first {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../assets/about/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+.first-box {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 25px;
+    border-radius: 15px;
+    width: 60%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.logo-first img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.container-first h1 {
+    font-size: 2.5rem; 
+    color: #000000 ;
+    margin-bottom: 20px;
+    
+}
+
+.container-first p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-cta {
+    background-color: #F1702A;
+    color: rgb(255, 255, 255);
+    border: 0.5px solid black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    
+}
+
+.btn-cta:hover {
+    background-color: #d6601f;
+}
+
+/* ---- Características */
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #f0f4ec;
+}
+
+.feature {
+    text-align: center;
+    width: 30%;
+}
+
+.feature img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 20px;
+    color: #666;
+}
+
+/* ----- Historia */
+
+
+
+.history {
+    background-color: #f0f4ec;
+    padding: 50px;
+    text-align: center;
+    margin: 0 10px 10px 10px;
+    background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.history h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    animation: zoomInTitle 1s ease forwards;
+}
+
+.history p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #34495e;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    text-indent: 30px;
+    animation: fadeInText 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* Animación para el título */
+@keyframes zoomInTitle {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animación para el texto */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----- Servicios */
+
+.services {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f4ec;
+}
+
+.services h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.service {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    vertical-align: top;
+    height: 350px;
+    border: 1px solid #e0e0e0; /* Borde de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de profundidad */
+    transition: transform 0.3s; /* Efecto de transición al pasar el mouse */
+}
+
+.service img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.service h3 {
+    font-size: 25px;
+    color: #2a7a2e;
+    margin-bottom: 15px;
+}
+
+.service p {
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.service:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+
+/* ----- Equipo */
+
+.team {
+    text-align: center;
+    background: linear-gradient(
+        rgba(255, 165, 0, 0.5), /* Naranja con 80% de opacidad */
+        rgba(0, 128, 0, 0.5) /* Verde con 80% de opacidad */
+    );
+    height: 100vh; /* Altura de la ventana del navegador */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 40px 0;
+}
+
+.team h2 {
+    font-size: 30px;
+    margin-bottom: 20px; /* Espacio entre el título y los miembros */
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px; /* Limita el ancho para alinear los miembros correctamente */
+    margin: 0 auto;
+}
+
+.member {
+    text-align: center;
+    width: 30%; /* Controla el ancho de cada miembro */
+    margin: 20px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra completamente el círculo */
+}
+
+.member p {
+    font-size: 20px;
+    color: #000000;
+}
+
+@media (min-width: 768px) {
+    .member {
+        width: calc(33.333% - 40px); /* Hace que haya 3 miembros por fila */
+    }
+}
+
+
+/* ----- Estadisticas */
+
+.statistics {
+    text-align: center;
+    padding: 40px 20px; /* Espacio superior e inferior */
+    color: #006C2E; /* Color del texto */
+}
+
+.statistics img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.statistics h2 {
+    font-size: 30px; /* Tamaño del título */
+    margin-bottom: 30px; /* Espacio entre el título y las estadísticas */
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en diferentes tamaños de pantalla */
+    justify-content: center; /* Centra las tarjetas */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.stat-item {
+    background-color: #ffffff; /* Color de fondo de cada tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    padding: 30px; /* Espacio interno */
+    margin: 20px; /* Margen entre tarjetas */
+    width: calc(45% - 40px); /* Ajusta el ancho de cada tarjeta para que entren 2 por fila */
+}
+
+.stat-item h3 {
+    font-size: 24px; /* Tamaño del número */
+    margin: 10px 0; /* Espacio entre el número y el texto */
+}
+
+.stat-item p {
+    font-size: 16px; /* Tamaño del texto */
+    color: #555; /* Color del texto */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .stat {
+        width: calc(100% - 40px); /* Hace que las tarjetas ocupen todo el ancho en pantallas pequeñas */
+    }
+}
+
+/* --- efecto fade in */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- fin efecto fade in */
