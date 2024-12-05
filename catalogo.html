@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECODONO</title>
     <link rel="stylesheet" href="styles/default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -59,11 +62,6 @@
                     <li><a href="#" data-category="accesorios">Accesorios</a></li>
                 </ul>
             </div>
-            <div class="filter-price">
-                <h4>Precio</h4>
-                <label for="priceRange">Desde - Hasta: <span id="priceValue"></span></label>
-                <input type="range" id="priceRange" min="0" max="100.000" step="1" value="100.000">
-            </div>
             <div class="filter-material">
                 <h4>Material</h4>
                 <ul>
@@ -77,11 +75,23 @@
                         <label for="camaras">Cámaras de neumático</label></li>
                 </ul>
             </div>
-            <button class="applyFilter" id="applyFilter">Aplicar filtro</button>
+            <div class="filter-price">
+                <h4>Precio</h4>
+                <label for="price-min">Desde:</label>
+                <input type="number" id="price-min" min="0" placeholder="Mínimo">
+                
+                <label for="price-max">Hasta:</label>
+                <input type="number" id="price-max" min="0" placeholder="Máximo">
+                
+                <button class="applyFilter" id="applyFilter">Aplicar filtro</button>
+            </div>            
         </aside>
         <div class="product-list">
         </div>
+
     </section>
+    <div class="pagination">
+    </div>
     <!-- Final del código -->
     <footer>
         <div class="footer">
@@ -156,3 +166,4 @@
     <script src="scripts/catalog.js"></script>
 </body>
 </html>
+<!-- Comentario de prueba Ezequiel 16/10/2024 -->
