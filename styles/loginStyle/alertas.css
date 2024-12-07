@@ -5,16 +5,33 @@
     text-align: left;
     border-radius: 7px;
     margin-bottom: 10px;
-    font-size: 10px;
     font-size: .8rem;
 }
 .register > .alerta-error,
 .register > .alerta-exito {
     display: none;
 }
+.sign > .alerta-Error,
+.sign > .alerta-Exito {
+    display: none;
+}
 .register .alertaError{
     display: block;
     background-color: #f66060;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+}
+.sign .alertaError{
+    display: block;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+    background-color: #f66060;
+}
+.sign .alertaExito {
+    display: block;
+    background-color: #0ca828;
     padding: .5rem 1rem;
     margin-top: 10px;
     font-weight: 500;
@@ -29,19 +46,17 @@
     font-weight: 500;
     font-size: .8rem;
 }
-.sign > .alerta-error,
-.sign > .alerta-exito {
-    display: none;
-}
+
 .alerta {
     color: red;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-bottom: 10px;
+    
 }
 .register .error {
     border: solid 1px #9d2222;
 }
 .register label {
-    margin-bottom: 20px;  
+    margin-bottom: 10px;  
 }
 

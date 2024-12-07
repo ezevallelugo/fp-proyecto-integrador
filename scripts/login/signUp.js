@@ -2,11 +2,18 @@ const form = document.querySelector('.register');
 const inputUser = document.querySelector(".register input[type='text']");
 const inputEmail = document.querySelector(".register input[type='email']");
 const inputPass = document.querySelector(".register input[type='password']");
-
+const alertaError = document.querySelector(".alerta-error");
+const alertaExito = document.querySelector(".alerta-exito")
 
 const userNameRegex = /^[a-zA-Z0-9\_\-]{4,16}$/;
 const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 const passwordRegex = /^.{4,12}$/;
+
+const estadoValidacionCampos = {
+    userName: false,
+    userEmail: false,
+    userPassword: false,
+}
 
 document.addEventListener("DOMContentLoaded", ()=>{
     form.addEventListener("submit", (e)=>{
@@ -27,10 +34,15 @@ function validarCampo(regularExpresion, campo, mensaje){
     const validarCampo = regularExpresion.test(campo.value);
     if(validarCampo){
         eliminarAlerta(campo.parentElement.parentElement)
+        estadoValidacionCampos[campo.name] = true;
+        console.log(estadoValidacionCampos)
+        campo.parentElement.classList.remove("error");
+        return;
        
       
     }else{
-        mostrarAlerta(campo.parentElement.parentElement,mensaje)
+        mostrarAlerta(campo.parentElement.parentElement,mensaje);
+        campo.parentElement.classList.add("error");
         
     }
 }
@@ -50,6 +62,22 @@ function eliminarAlerta(referencia) {
 }
 
 function enviarFormulario(){
-    //Validamos envio de formulario
+  if(estadoValidacionCampos.userName && estadoValidacionCampos.userEmail && estadoValidacionCampos.userPassword)
+  {  alertaExito.classList.add("alertaExito");
+    alertaError.classList.remove("alertaError");
+    formRegister.reset();
+    setTimeout(() => {
+        alertaExito.classList.remove("alertaExito");
+
+    }, 3000);
+    return;
 }
-console.log('hola');
+  else{
+    alertaExito.classList.remove("alertaExito");
+    alertaError.classList.add("alertaError");
+    setTimeout(() => {
+        alertaError.classList.remove("alertaError");
+
+    }, 3000);
+  }
+}
