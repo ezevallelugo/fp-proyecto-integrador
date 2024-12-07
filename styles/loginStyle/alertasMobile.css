@@ -1,0 +1,44 @@
+/* Personalización de mis alertas */
+.container-mobile .form-group .alerta {
+    width: 290px;
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-size: .8rem;
+}
+
+.container-mobile > .alerta-error,
+.container-mobile > .alerta-exito {
+    display: none;
+}
+
+.container-mobile .alertaError {
+    display: block;
+    background-color: #f66060; /* Color de fondo para errores */
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.container-mobile .alertaExito {
+    display: block;
+    background-color: #0ca828; /* Color de fondo para éxito */
+    padding: .5rem 1rem;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.alerta {
+    color: red; /* Color del texto de alerta */
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.container-mobile .error {
+    border: solid 1px #9d2222; /* Borde rojo para campos con error */
+}
+
+.container-mobile label {
+    margin-bottom: 10px;  
+}
