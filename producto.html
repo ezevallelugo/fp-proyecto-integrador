@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECODONO</title>
     <link rel="stylesheet" href="styles/default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -49,12 +52,12 @@
     <section class="product-detail">
         <div class="product-images">
             <div class="thumbnail-images">
-                <img src="assets/product/remera-2.png" alt="Remera Vent Verde - Thumbnail 1">
-                <img src="assets/product/remera-3.png" alt="Remera Vent Verde - Thumbnail 2">
-                <img src="assets/product/remera-4.png" alt="Remera Vent Verde - Thumbnail 3">
+                <img src="assets/product/remera-2.png" alt="Remera Vent Verde - Thumbnail 1" onclick="changeImage(this)">
+                <img src="assets/product/remera-3.png" alt="Remera Vent Verde - Thumbnail 2" onclick="changeImage(this)">
+                <img src="assets/product/remera-4.png" alt="Remera Vent Verde - Thumbnail 3" onclick="changeImage(this)">
             </div>
             <div class="main-image">
-                <img src="assets/product/remera-1.png" alt="Remera Vent Verde">
+                <img id="mainImage" src="assets/product/remera-1.png" alt="Remera Vent Verde">
             </div>
         </div>
         <div class="product-info">

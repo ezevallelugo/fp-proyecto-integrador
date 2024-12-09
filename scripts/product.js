@@ -1,3 +1,11 @@
+function changeImage(thumbnail) {
+    // Obtener el src de la imagen en miniatura clickeada
+    const newSrc = thumbnail.src;
+
+    // Cambiar la imagen principal
+    document.getElementById('mainImage').src = newSrc;
+}
+
 function showContent(tab) {
     // Remueve la clase 'active' de todos los botones
     document.querySelectorAll('.tabs .tab').forEach(button => {

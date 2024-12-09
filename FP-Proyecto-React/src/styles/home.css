@@ -1,0 +1,291 @@
+.home button {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.hero-content p {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.stat p {
+    color: white;
+    text-shadow: 0px 3px 4px black;
+}
+
+.stat span {
+    /* -webkit-text-stroke: 0.08rem black; */
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.infinity {
+    font-size: 5.5rem !important;
+
+    height: 37px;
+    top: -32px;
+    position: relative;
+}
+
+.cta-button {
+    font-size: 1.3rem;
+    display: inline-block;
+    background-color: #ff6f3d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 999px;
+    color: black;
+    cursor: pointer;
+}
+
+.stat span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero-image img {
+    max-width: 500px;
+    height: auto;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.partners img {
+    max-width: 213px;
+    margin: 0 20px;
+}
+
+.top-border{
+    border-top: 1px solid black; 
+}
+
+.home button {
+    border-radius: 999px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 1rem;
+    display: inline-block;
+    background-color: #ff6f3d;
+    text-decoration: none;
+    padding: 19px 69px;
+}
+
+@media (max-width: 900px) {
+    .home button{
+        padding: 10px 20px;
+    }
+}
+
+.boxes{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.container-box {
+    display: flex;            /* Hacer que el contenedor sea flex */
+    justify-content: space-between; /* Espacio entre los divs */
+    gap: 0;              /* Gap de 3 rem entre los divs */
+    padding: 2.5rem 0rem;          /* Opcional: padding del contenedor */
+    flex-direction: column;
+}
+
+.item h3{
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.title {
+    text-align: center;
+    padding: 2.3rem 1rem;
+    font-size: 2rem;
+    margin: 0;
+    color: black;
+}
+
+.secondtitle-description {
+    margin: 0 5%;
+    text-align: center;
+}
+
+.home p {
+    font-size: 1.25rem;
+}
+
+.faq-container {
+    padding: 0.9rem 1rem;
+ }
+
+ .faq h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.partners img:last-child {
+    margin-top: 0.5rem;
+}
+
+.hero-content h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    /*-webkit-text-stroke: 0.12rem black; Agrega un borde negro de 1px al texto, se arruina con monserrat*/
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+     text-align: center;
+}
+
+.hero-content {
+    max-width: 660px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-section {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    background: url('../assets/home/bg-hero.png') no-repeat center center/cover;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 90vh;
+
+    align-content: center;
+}
+
+.hero-content p {
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.stat {
+    text-align: center;
+    position: relative;
+    flex: 1 1 200px;
+}
+
+@media (min-width: 900px) {
+    .container-box {
+        flex-direction: row;
+        gap: 3rem;
+        padding: 4.5rem 3rem;
+    }
+    .item h3{
+        margin: 32px 0;
+    }
+    .title {
+        padding: 3rem;
+        font-size: 3rem;
+    }
+
+    .h3-description {
+        margin: 0 11%;
+    }
+
+    .home p {
+        font-size: 1.5rem;
+    }
+    
+    .faq-container {
+        padding: 2.9rem 5rem;
+     }
+
+     .faq h3 {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 4.1rem;
+        text-align: left;
+    }
+
+    .hero-content {
+       margin: 0 0;
+       text-align: start;
+    }
+
+    .hero-content p {
+        text-align: left;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .stat {
+        flex: 0 1 auto;
+    }
+}
+
+.item {
+    flex: 1;                /* Cada div tomará el mismo ancho */
+    padding: 1rem;          /* Espaciado interno del div */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    text-align: center;
+}
+
+.item h3{
+    font-size: 2rem;
+}
+
+.item p{
+    font-size: 1.25rem;
+}
+
+.item img{
+    height: 5.4rem;
+}
+
+.faq {
+    margin: 0 4%;
+    background-color: #E7FCDB;
+    border-radius: 40px;
+}
+
+.faq p {
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.faq article {
+    margin-bottom: 2rem;
+}
+
+.faq article:last-child {
+    margin-bottom: 0;
+  }

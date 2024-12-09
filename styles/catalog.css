@@ -1,17 +1,21 @@
 .catalog {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: normal;
     display: flex;
     padding: 20px;
     background-color: #f5f5f5;
 }
 
 .filters {
-    width: 20%;
+    width: 15%;
     background-color: white;
     padding: 20px;
     margin-right: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .filters h3, .filters h4 {
     margin-bottom: 15px;
@@ -26,32 +30,108 @@
     margin-bottom: 10px;
 }
 
-.filter-price {
-    width: 300px;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+/* Estilos generales de la lista */
+.filter-category ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
 }
 
-.filter-price input[type="range"] {
-    width: 100%;
-    margin: 10px 0;
+.filter-category li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces */
+.filter-category a {
+    text-decoration: none; 
+    color: grey; 
+    font-size: 16px; 
+    transition: color 0.3s ease;
+}
+
+/* Estilo para el enlace seleccionado */
+.filter-category a.selected {
+    color: black; /* Color negro para el enlace seleccionado */
+}
+
+/* Opcional: Cambia el color cuando el enlace es hover (al pasar el cursor) */
+.filter-category a:hover {
+    color: black;
+}
+
+/* Estilo general de los botones de los materiales*/
+.filter-material {
+    text-align: center;
+}
+
+.filter-material ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;            
+    justify-content: center;     
+    gap: 10px;                   
+}
+
+.filter-material li {
+    margin-bottom: 10px;
+}
+
+.filter-material input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilos para los labels que actuarán como botones */
+.filter-material label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(221, 219, 219); 
+    color: rgb(0, 0, 0);
+    border-radius: 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+/* Cambia el color a negro cuando el checkbox esté seleccionado */
+.filter-material input[type="checkbox"]:checked + label {
+    background-color: black;
+    color: white;
+}
+
+.filter-price {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.filter-price label {
+    font-size: 14px;
+}
+
+.filter-price input[type="number"] {
+    padding: 6px;
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .applyFilter {
-    width: 100%;
-    padding: 10px;
-    background-color: black;
-    color: white;
+    width: 70%;
+    height: 40px;
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #fff;
     border: none;
+    border-radius: 20px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
 }
 
+/* Lista de productos */
 .product-list {
-    width: 100%;
+    width: 10%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -66,6 +146,22 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.product a {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black; /* Establece el color del texto en negro */
+}
+
+.product a:hover {
+    color: lightgray; /* Cambia el color a gris claro al pasar el cursor */
+}
+
+.product h2 {
+    color: inherit; /* Mantiene el color definido en el enlace */
+}
+
+
 .product[style="display: none;"] {
     opacity: 0;
     height: 0;
@@ -73,58 +169,67 @@
 }
 
 .product img {
-    max-width: 100%;
+    width: 300px;
+    height: 300px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .product p {
     margin: 10px 0;
 }
 
-.discount {
-    text-decoration: line-through;
-    color: red;
-}
-
-.percentage {
-    color: green;
+/* Estilos para los precios */
+.current-price {
     font-weight: bold;
+    color: #000000; /* Color del precio actual */
 }
 
+.original-price {
+    text-decoration: line-through; /* Tacha el precio original */
+    color: grey;
+    margin-left: 10px;
+}
+
+.discount {
+    color: red; /* Color del descuento */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Paginacion */
 .pagination {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
-.pagination ul {
-    display: flex;
-    list-style: none;
-}
-
-.pagination ul li {
-    margin-right: 10px;
-}
-
-.pagination ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #eaeaea;
-}
-
-.pagination ul li a:hover {
-    background-color: #d4d4d4;
-}
-
-.previous, .next {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
+.pagination button {
+    background-color: transparent;
     border: none;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
 }
+
+.pagination .page-number {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.pagination .page-number.selected {
+    background-color: #333;
+    color: white;
+}
+
+.pagination .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
