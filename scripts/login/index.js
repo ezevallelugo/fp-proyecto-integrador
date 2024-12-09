@@ -11,15 +11,15 @@ function toggleForm() {
     }
 }
 
-function login() {
+/* function login() {
     // Aquí puedes agregar la lógica para iniciar sesión
     alert('Iniciar Sesión');
 }
-
-function register() {
+ */
+/* function register() {
     // Aquí puedes agregar la lógica para registrarse
     alert('Registrarse');
-}
+} */
 
 // Nueva función para manejar el cambio de tamaño de la ventana
 function handleResize() {

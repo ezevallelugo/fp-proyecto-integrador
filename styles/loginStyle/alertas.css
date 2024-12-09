@@ -7,6 +7,17 @@
     margin-bottom: 10px;
     font-size: .8rem;
 }
+
+ .alertaE, .alertaR
+{
+    display: none;
+}
+.inicio-mobile .alertaR
+{
+    color:red;
+}
+
+
 .register > .alerta-error,
 .register > .alerta-exito {
     display: none;
@@ -15,9 +26,26 @@
 .sign > .alerta-Exito {
     display: none;
 }
+/* #login-container .alertaE
+{
+    display: block;
+    text-align: center;
+    color: green;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+}
+#login-container .alertaR{
+    display: block;
+    text-align: center;
+    color: red;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+} */
 .register .alertaError{
     display: block;
-    background-color: #f66060;
+    color: red;
     padding: .5rem 1rem;
     font-weight: 500;
     font-size: .8rem;
@@ -27,7 +55,7 @@
     padding: .5rem 1rem;
     font-weight: 500;
     font-size: .8rem;
-    background-color: #f66060;
+    color: red;
 }
 .sign .alertaExito {
     display: block;
