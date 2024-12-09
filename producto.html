@@ -45,45 +45,121 @@
             <li><img src="assets/navegation/carrito.svg" alt="Carrito" class="cart-icon"></li>
         </ul>
     </header>
-    <script src="scripts/top-bar-close.js"></script>
     <!-- Codigo para agregar -->
-    <section class="catalog">
-        <aside class="filters">
-            <h3>Filtros</h3>
-            <div class="filter-category">
-                <h4>Categorías</h4>
+    <section class="product-detail">
+        <div class="product-images">
+            <div class="thumbnail-images">
+                <img src="assets/product/remera-2.png" alt="Remera Vent Verde - Thumbnail 1">
+                <img src="assets/product/remera-3.png" alt="Remera Vent Verde - Thumbnail 2">
+                <img src="assets/product/remera-4.png" alt="Remera Vent Verde - Thumbnail 3">
+            </div>
+            <div class="main-image">
+                <img src="assets/product/remera-1.png" alt="Remera Vent Verde">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1>Remera Vent Verde</h1>
+            <div class="price">
+                <span class="current-price">$60.000</span>
+                <span class="original-price">$80.000</span>
+                <span class="discount">-20%</span>
+            </div>
+            <p class="product-description">
+                La camiseta Vent es un básico de manga corta fabricado con una mezcla de algodón orgánico y reciclado.
+            </p>
+            <div class="selection-container">
+                <span>Color</span>
+                <div class="color-selection">
+                    <div class="color-button brown selected"></div>
+                    <div class="color-button green"></div>
+                    <div class="color-button blue"></div>
+                </div>
+                <span>Talle</span>
+                <div class="size-selection">
+                    <div class="size-button">S</div>
+                    <div class="size-button">M</div>
+                    <div class="size-button selected">L</div>
+                    <div class="size-button">XL</div>
+                </div>
+                <div class="quantity-selection">
+                    <button class="quantity-button decrement">-</button>
+                    <div class="quantity-display">1</div>
+                    <button class="quantity-button increment">+</button>
+                    <button class="add-to-cart-button">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product-details">
+        <div class="tabs">
+            <button class="tab active" onclick="showContent('description')">Descripción</button>
+            <button class="tab" onclick="showContent('details')">Detalles</button>
+            <button class="tab" onclick="showContent('shipping')">Envíos</button>
+        </div>
+        <div class="tab-content">
+            <div id="description" class="content active">
+                <p>
+                    La camiseta Vent es un básico de manga corta fabricado con una mezcla de algodón orgánico y reciclado. El algodón orgánico aporta confort y transpirabilidad, mientras que el algodón reciclado refleja nuestro compromiso con la sostenibilidad al reducir la huella de carbono. Un esencial para quienes buscan estilo y ética en una sola prenda.
+                </p>
+            </div>
+            <div id="details" class="content">
                 <ul>
-                    <li><a href="#" data-category="remeras">Remeras</a></li>
-                    <li><a href="#" data-category="pantalones">Pantalones</a></li>
-                    <li><a href="#" data-category="calzado">Calzado</a></li>
-                    <li><a href="#" data-category="accesorios">Accesorios</a></li>
+                    <li>Tejido principal: 50% Algodón reciclado / 50% Algodón orgánico</li>
+                    <li>Fit regular</li>
+                    <li>Cuello redondo</li>
+                    <li>Manga corta</li>
+                    <li>Logo ECOALF en la manga</li>
+                    <li>Vegano</li>
                 </ul>
             </div>
-            <div class="filter-price">
-                <h4>Precio</h4>
-                <label for="priceRange">Desde - Hasta: <span id="priceValue"></span></label>
-                <input type="range" id="priceRange" min="0" max="100.000" step="1" value="100.000">
+            <div id="shipping" class="content">
+                <p>Método de envío: Envío gratuito en compras superiores a $50.00. El tiempo estimado de entrega es de 5 a 7 días hábiles.</p>
             </div>
-            <div class="filter-material">
-                <h4>Material</h4>
-                <ul>
-                    <li><input type="checkbox" id="algodon" name="algodon">
-                        <label for="algodon">Algodón reciclado</label></li>
-                    <li><input type="checkbox" id="lana" name="lana">
-                        <label for="lana">Lana reciclada</label></li>
-                    <li><input type="checkbox" id="poliester" name="poliester">
-                        <label for="poliester">Poliéster reciclado</label></li>
-                    <li><input type="checkbox" id="camaras" name="camaras">
-                        <label for="camaras">Cámaras de neumático</label></li>
-                </ul>
-            </div>
-            <button class="applyFilter" id="applyFilter">Aplicar filtro</button>
-        </aside>
-        <div class="product-list">
+        </div>
+    </section>    
+    <section class="reviews">
+        <h2>Opiniones</h2>
+        <div class="review-form">
+            <textarea row="1" placeholder="Deja acá tu opinión..."></textarea>
+            <br>
+            <button class="comment-btn">Comentar</button>
+        </div>
+        <div class="review">
+            <p>★★★★★</p>
+            <p><strong>Pablo T.</strong></p>
+            <p>“Siempre busco maneras de consumir de forma más sostenible, y me encanta saber que estoy eligiendo moda responsable sin sacrificar estilo. Ecodono no solo me permite encontrar prendas únicas, cada compra contribuye a un futuro más verde.”</p>
+        </div>
+    </section>
+    <h2 class="related-tittle">También te podría interesar</h2>
+    <section class="related-products">
+        <div class="related-product">
+            <img src="assets/product/remera-verde.png" alt="Remera Vent Wash">
+            <p>Remera Vent Wash</p>
+            <span class="current-price">$40.000</span>
+            <span class="original-price">$52.000</span>
+            <span class="discount">-20%</span>
+        </div>
+        <div class="related-product">
+            <img src="assets/product/maletin.png" alt="Maletín camión">
+            <p>Maletín camión</p>
+            <span class="current-price">$80.000</span>
+        </div>
+        <div class="related-product">
+            <img src="assets/product/remera-azul.png" alt="Remera Melti Azul Marino">
+            <p>Remera Melti Azul Marino</p>
+            <span class="current-price">$50.000</span>
+        </div>
+        <div class="related-product">
+            <img src="assets/product/zapatillas.png" alt="Sneaker Peckham Black Woman">
+            <p>Sneaker Black Woman</p>
+            <span class="current-price">$70.000</span>
+            <span class="original-price">$100.000</span>
+            <span class="discount">-30%</span>
         </div>
     </section>
     <!-- Final del código -->
     <footer>
+        
         <div class="footer">
             <div class="newsletter">
                 <h2>MANTENTE INFORMADO POR NUESTRO NEWSLETTER</h2>
@@ -153,6 +229,6 @@
             </div>
         </div>
     </footer>
-    <script src="scripts/catalog.js"></script>
+    <script src="scripts/product.js"></script>
 </body>
 </html>
