@@ -8,13 +8,25 @@
     font-size: .8rem;
 }
 
- .alertaE, .alertaR
+.inicio-mobile > .alertaE, 
+.inicio-mobile > .alertaR {
+    display: none;
+}
+.inicio-mobile .alertaR {
+    color: red;
+}
+.inicio-mobile .alertaE
+{
+    color: green;
+}
+.register-mobile > .alertaE,
+.register-mobile > .alertaR
 {
     display: none;
 }
-.inicio-mobile .alertaR
+.register-mobile .alertaR
 {
-    color:red;
+    color: red;
 }
 
 
@@ -43,6 +55,7 @@
     font-weight: 500;
     font-size: .8rem;
 } */
+
 .register .alertaError{
     display: block;
     color: red;
@@ -66,6 +79,13 @@
     font-size: .8rem;
 }
 
+.register .alertaError{
+    display: block;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+    color: red;
+}
 .register .alertaExito {
     display: block;
     background-color: #0ca828;
@@ -74,6 +94,7 @@
     font-weight: 500;
     font-size: .8rem;
 }
+
 
 .alerta {
     color: red;

@@ -1,5 +1,7 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const mobileSesion = document.querySelector('.inicio-mobile');
+    const inputUser = document.querySelector('.register-user')
     const inputEmail = document.querySelector("#login-email");
     const inputPass = document.querySelector("#login-password");
     const alertaR = document.querySelector(".alertaR");
