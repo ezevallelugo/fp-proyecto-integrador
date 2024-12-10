@@ -71,6 +71,7 @@
 .sign .alertaError{
     display: block;
     padding: .5rem 1rem;
+    margin-bottom: 20px;
     font-weight: 500;
     font-size: .8rem;
     color: red;
