@@ -79,7 +79,9 @@ a {
 #singIn, #signUp {
     background-color: transparent;
     border: 2px solid #fff;
+    
 }
+
 
 .overlay-container {
     position: absolute;
@@ -157,7 +159,29 @@ a {
     border: 1px solid #ccc;
     border-radius: 50%;
 }
+.register h1
+{
+    font-family: "Poppins", sans-serif;
+    color:#48f891;
 
+}
+.overlay-container .overlay-right
+{
+    font-family: "Poppins", sans-serif;
+}
+.overlay-right p
+{
+    font-weight: 300;
+}
+.overlay-container .overlay-left
+{
+    font-family: "Poppins", sans-serif;
+}
+.overlay-left p
+{
+    font-weight: 300;
+    
+}
 .container-mobile {
     display: none; /* Inicialmente oculto, se mostrará en pantallas pequeñas */
 }

@@ -11,6 +11,10 @@
     opacity:1;
     z-index: 5;
 }
+.register h1
+{
+    font-size: 30px;
+}
 #signUp{
     font-size: 14px; /* Cambié de 12px a 14px para un ajuste más pequeño */
     font-weight: bold;
