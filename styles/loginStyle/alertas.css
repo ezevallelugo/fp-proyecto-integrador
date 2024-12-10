@@ -26,7 +26,12 @@
 }
 .register-mobile .alertaR
 {
+    
     color: red;
+}
+.register-mobile .alertaE
+{
+    color: green;
 }
 
 
