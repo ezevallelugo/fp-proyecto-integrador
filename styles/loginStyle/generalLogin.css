@@ -258,18 +258,8 @@ a {
         height: 40px;
         color: #eee;
     }
-    
-  /*   .form-group button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        font-size: 16px;
-        cursor: pointer;
-    } */
-    .inicio-mobile a{
+
+    .inicio-mobile .pass{
         color: #08b04d;
     }  
   
