@@ -1,19 +1,20 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     min-height: 50vh;
-    background-image: url("/assets/img/fondoLogin.png");
+    background-image: url("/assets/img/fondoLogin.png"); 
+  
     font-family: 'monserrat', sans-serif;
-    margin:10%;
+    margin: 10%;
 }
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 50% 50%;
     position: relative;
@@ -23,11 +24,11 @@ body{
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-                0 10px 10px rgba(0,0,0,0.22)
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.sign-up, .sign-in{
+.sign-up, .sign-in {
     position: absolute;
     top: 0;
     left: 0;
@@ -35,10 +36,7 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-
-
-
-form{
+form {
     display: flex;
     justify-content: center; 
     flex-direction: column;
@@ -49,12 +47,12 @@ form{
     background: #fff;
 }
 
-h1{
+h1 {
     font-weight: bold;
     margin: 0;
 }
 
-p{
+p {
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
@@ -62,7 +60,7 @@ p{
     margin: 15px 0 20px;
 }
 
-input{
+input {
     width: 100%;
     padding: 12px 15px;
     margin: 8px 15px;
@@ -72,39 +70,21 @@ input{
     outline: none;
 }
 
-a{
-    color:#333;
+a {
+    color: #333;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
 }
 
-/*button{
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 55px;
-    margin: 20px;
-    border-radius: 20px;
-    border: 1px solid #f5793B;
-    color:#fff;
-    background: #f5793B;
-    outline: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition:transform 80ms ease-in;
-    cursor:pointer;
-}
-
-button:active{
-    transform: sclae(0.90);
-}
-*/
-
-#singIn, #signUp{
+#singIn, #signUp {
     background-color: transparent;
     border: 2px solid #fff;
+    
 }
-.overlay-container{
+
+
+.overlay-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -115,27 +95,26 @@ button:active{
     z-index: 100;
 }
 
-.container.right-panel-active .overlay-container{
+.container.right-panel-active .overlay-container {
     transform: translateX(-100%);
 }
 
-.overlay{
+.overlay {
     position: relative;
     color: #fff;
-    background: #ff416c;
+    background: linear-gradient(to right, #08b04d, #044e23);
     left: -100%;
     height: 100%;
     width: 200%;
-    background: linear-gradient(to right, #08b04d, #044e23 );
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay{
+.container.right-panel-active .overlay {
     transform: translateX(50%);
 }
 
-.overlay-left, .overlay-right{
+.overlay-left, .overlay-right {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -150,28 +129,28 @@ button:active{
     transition: transform 0.6s ease-in-out;
 }
 
-.overlay-left{
+.overlay-left {
     transform: translateX(-20%);
 }
 
-.overlay-right{
+.overlay-right {
     right: 0;
     transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-left{
+.container.right-panel-active .overlay-left {
     transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right{
+.container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
 
-.social-container{
+.social-container {
     margin: 20px 0;
 }
 
-.social-container a{
+.social-container a {
     height: 40px;
     width: 40px;
     margin: 0 5px;
@@ -180,11 +159,123 @@ button:active{
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 50%;
-} 
-/*@media screen and (max-width: 768px){
-    body{
-        background: pink;
-    }
-}*/
+}
+.register h1
+{
+    font-family: "Poppins", sans-serif;
+    color:#067f38;
 
+}
+
+.overlay-container .overlay-right
+{
+    font-family: "Poppins", sans-serif;
+}
+.overlay-right p
+{
+    font-weight: 300;
+}
+.overlay-container .overlay-left
+{
+    font-family: "Poppins", sans-serif;
+}
+.overlay-left p
+{
+    font-weight: 300;
+    
+}
+.container-mobile {
+    display: none; /* Inicialmente oculto, se mostrará en pantallas pequeñas */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: none; /* Oculta el contenedor de escritorio en pantallas pequeñas */
+    }
+    
+    body {
+    
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container-mobile {
+        display: block; /* Muestra el contenedor móvil en pantallas pequeñas */
+        width: 90%;
+        max-width: 400px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container-mobile h2 {
+        text-align: center;
+        margin-bottom: 0px;
+        font-family: "Poppins", sans-serif;
+        color: #067f38;
+    }
+  
+    .social-container a
+    {
+        height: 30px;
+        width: 30px;
+        margin: 0 5px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+
+    }
+    
+    .form-group  {
+        margin-bottom: 0px;
+    }
+
+
+    .form-group i{
+        position: relative;
+        right: 50%;
+        top: 50%;
+        color: grey;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .form-group input[type="submit"]{
+        background-color: #067f38;
+        width: 90%;
+        padding: 0 20px;
+        font-size: 20px;
+        height: 40px;
+        color: #eee;
+    }
+
+    .inicio-mobile .pass{
+        color: #08b04d;
+    }  
+  
+    
+    .toggle-link {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .toggle-link a {
+        color: #f5793b;
+        text-decoration: none;
+    }
+    
+    .toggle-link a:hover {
+        text-decoration: underline;
+    }
+}
 

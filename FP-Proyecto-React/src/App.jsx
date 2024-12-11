@@ -18,7 +18,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/get-started" element={<Login />} />
             <Route path="/profile" element={<PrivateRoute>  <Profile /> </PrivateRoute>} />
           </Routes>
           <Footer />
