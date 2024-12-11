@@ -11,6 +11,10 @@
     opacity:1;
     z-index: 5;
 }
+.register h1
+{
+    font-size: 30px;
+}
 #signUp{
     font-size: 14px; /* Cambié de 12px a 14px para un ajuste más pequeño */
     font-weight: bold;
@@ -60,7 +64,7 @@
     color:#a7a7a7;
 }
 .register input[type="submit"]{
-    background-color: #08b04d;
+    background-color: #067f38;
     color: #fff;
     width: 70%;
     font-family: "Poppins", sans-serif;
