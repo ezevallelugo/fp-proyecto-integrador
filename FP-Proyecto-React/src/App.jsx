@@ -6,6 +6,7 @@ import PrivateRoute from './AuthUtils/PrivateRoute';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
+import About from './pages/About';
 
 export default function App() {
 
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
             <Route path="/get-started" element={<Login />} />
+            <Route path="/about" element={<About />} />
             <Route path="/profile" element={<PrivateRoute>  <Profile /> </PrivateRoute>} />
           </Routes>
           <Footer />

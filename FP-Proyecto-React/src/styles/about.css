@@ -5,7 +5,7 @@
     font-family: Arial, sans-serif;
 }
 
-body, .services, .features, .history {
+.services, .features, .history {
     background-color: #f0f4ec;
 }
 
