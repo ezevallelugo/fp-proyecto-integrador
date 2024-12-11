@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import {useLocation} from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const topBarButton = document.querySelector('.top-bar button');
@@ -26,7 +28,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
+    <header className={location.pathname === '/about' ? 'bg-[#e3f2fd] p-5' : ''}>
       {/* Top Bar */}
       <div className="top-bar flex justify-between items-center bg-[#006C2E] text-white px-4 h-[55px]">
         <div className="w-full text-center">
@@ -38,8 +40,7 @@ const Header = () => {
       {/* Main Navigation */}
       <nav>
         <div className="flex justify-between items-center p-4 bg-white">
-
-          <div className='flex w-full gap-5 items-center'>
+          <div className="flex w-full gap-5 items-center">
 
             {/* Logo */}
             <div className="h-10 md:h-6">
@@ -72,7 +73,7 @@ const Header = () => {
 
           </div>
 
-          <div className='flex'>
+          <div className="flex">
             {/* Desktop Buttons */}
             <div className="hidden md:flex md:flex-nowrap md:justify-end md:gap-3 md:items-center">
               <button className="bg-[#fb923c] px-5 py-2 rounded-full text-white cursor-pointer text-sm border border-black">
