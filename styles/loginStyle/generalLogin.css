@@ -219,6 +219,7 @@ a {
         font-family: "Poppins", sans-serif;
         color: #067f38;
     }
+  
     .social-container a
     {
         height: 30px;
@@ -251,9 +252,11 @@ a {
     }
     .form-group input[type="submit"]{
         background-color: #067f38;
-        width: 75%;
+        width: 90%;
+        padding: 0 20px;
         font-size: 20px;
         height: 40px;
+        color: #eee;
     }
     
   /*   .form-group button {
@@ -266,7 +269,9 @@ a {
         font-size: 16px;
         cursor: pointer;
     } */
-    
+    .inicio-mobile a{
+        color: #08b04d;
+    }  
   
     
     .toggle-link {
@@ -275,7 +280,7 @@ a {
     }
     
     .toggle-link a {
-        color: #007bff;
+        color: #f5793b;
         text-decoration: none;
     }
     
