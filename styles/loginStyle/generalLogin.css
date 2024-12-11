@@ -8,7 +8,8 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 50vh;
-    background-image: url("/assets/img/fondoLogin.png");
+    background-image: url("/assets/img/fondoLogin.png"); 
+  
     font-family: 'monserrat', sans-serif;
     margin: 10%;
 }
@@ -162,9 +163,10 @@ a {
 .register h1
 {
     font-family: "Poppins", sans-serif;
-    color:#48f891;
+    color:#067f38;
 
 }
+
 .overlay-container .overlay-right
 {
     font-family: "Poppins", sans-serif;
@@ -192,8 +194,7 @@ a {
     }
     
     body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #f0f0f0;
+    
         margin: 0;
         padding: 0;
         display: flex;
@@ -214,28 +215,51 @@ a {
     
     .container-mobile h2 {
         text-align: center;
-        margin-bottom: 20px;
-        color: #333;
+        margin-bottom: 0px;
+        font-family: "Poppins", sans-serif;
+        color: #067f38;
+    }
+  
+    .social-container a
+    {
+        height: 30px;
+        width: 30px;
+        margin: 0 5px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+
     }
     
-    .form-group {
-        margin-bottom: 15px;
+    .form-group  {
+        margin-bottom: 0px;
     }
-    
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        color: #333;
+
+
+    .form-group i{
+        position: relative;
+        right: 50%;
+        top: 50%;
+        color: grey;
     }
-    
     .form-group input {
-        width: 95%;
+        width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
     }
+    .form-group input[type="submit"]{
+        background-color: #067f38;
+        width: 90%;
+        padding: 0 20px;
+        font-size: 20px;
+        height: 40px;
+        color: #eee;
+    }
     
-    .form-group button {
+  /*   .form-group button {
         width: 100%;
         padding: 10px;
         background-color: #007bff;
@@ -244,11 +268,11 @@ a {
         color: #fff;
         font-size: 16px;
         cursor: pointer;
-    }
-    
-    .form-group button:hover {
-        background-color: #0056b3;
-    }
+    } */
+    .inicio-mobile a{
+        color: #08b04d;
+    }  
+  
     
     .toggle-link {
         text-align: center;
@@ -256,7 +280,7 @@ a {
     }
     
     .toggle-link a {
-        color: #007bff;
+        color: #f5793b;
         text-decoration: none;
     }
     
