@@ -50,6 +50,45 @@
     }
 }
 
+@media (max-width: 770px) {
+    .team{
+        padding: 13% 0 !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 463px) {
+    .team h2{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .member{
+        width: 100% !important;
+    }
+    .feature{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 580px) {
+    .stat-item{
+        width: 100% !important;
+        margin: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (max-width: 525px) {
+    .features{
+        flex-wrap: wrap !important;
+
+    }
+    .feature{
+        width: 85% !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
 .first-box {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 25px;
