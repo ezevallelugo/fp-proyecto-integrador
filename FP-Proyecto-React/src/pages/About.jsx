@@ -1,3 +1,5 @@
+
+
 export default function About() {
     return (
         <div>
@@ -5,33 +7,33 @@ export default function About() {
 
             <body>
 
-                <div class="container-first">
-                    <div class="first-box fade-in">
-                        <div class="logo-first">
-                            <img src="assets/about/logo-completo.png" alt="Logo Ecodono">
+                <div className="container-first">
+                    <div className="first-box fade-in">
+                        <div className="logo-first">
+                            <img src="src/assets/about/logo-completo.png" alt="Logo Ecodono">
                         </div>
                         <h1>¿QUIÉNES SOMOS?</h1>
                         <p>Somos una plataforma dedicada a impulsar la economía circular, ofreciendo un espacio donde las personas pueden <strong>comprar, vender, reciclar</strong> y dar nueva vida a productos de segunda mano. Creemos en el poder de la <strong>reutilización</strong> y el <strong>upcycling</strong> para reducir el impacto ambiental y crear un cambio positivo.</p>
-                        <a href="#history" class="btn-cta">Explora más</a>
+                        <a href="#history" className="btn-cta">Explora más</a>
                     </div>
                 </div>
 
-                <section class="features">
-                    <div class="feature fade-in">
-                        <img src="assets/about/mundo.png" alt="Reciclaje">
+                <section className="features">
+                    <div className="feature fade-in">
+                        <img src="src/assets/about/mundo.png" alt="Reciclaje">
                             <p>Promovemos el reciclaje y reutilización para reducir el impacto ambiental.</p>
                     </div>
-                    <div class="feature fade-in">
-                        <img src="assets/about/simbolo.png" alt="Conectar personas">
+                    <div className="feature fade-in">
+                        <img src="src/assets/about/simbolo.png" alt="Conectar personas">
                             <p>Conectando personas para un futuro sostenible.</p>
                     </div>
-                    <div class="feature fade-in">
-                        <img src="assets/about/bote.png" alt="Soluciones sustentables">
+                    <div className="feature fade-in">
+                        <img src="src/assets/about/bote.png" alt="Soluciones sustentables">
                             <p>Inspirando soluciones sustentables para un mundo mejor.</p>
                     </div>
                 </section>
 
-                <section class="history fade-in">
+                <section className="history fade-in">
                     <h2 id="history">NUESTRA HISTORIA</h2>
                     <p>
                         Todo comenzó con una vieja cubierta de auto. Al principio, parecía un residuo más destinado al olvido, una pieza más en el rompecabezas de la contaminación. Pero nosotros vimos su potencial. De esa cubierta, surgió un par de zapatillas que no solo eran funcionales y cómodas, sino que también contaban una historia: la historia de lo que se puede lograr con imaginación y compromiso.
@@ -40,86 +42,86 @@ export default function About() {
                 </section>
 
 
-                <section class="services fade-in">
+                <section className="services fade-in">
                     <h2>¿QUÉ OFRECEMOS?</h2>
-                    <div class="service">
-                        <img src="assets/about/economia.png" alt="Economía circular real">
+                    <div className="service">
+                        <img src="src/assets/about/economia.png" alt="Economía circular real">
                             <h3>Economía circular <br> real</h3>
                             <p>Integramos reciclaje y upcycling, transformando productos en desuso en algo nuevo.</p>
                     </div>
-                    <div class="service">
-                        <img src="assets/about/reduccion.png" alt="Reducción del desperdicio">
+                    <div className="service">
+                        <img src="src/assets/about/reduccion.png" alt="Reducción del desperdicio">
                             <h3>Reducción del desperdicio</h3>
                             <p>Reciclamos materiales como plástico, goma y textiles para crear productos útiles.</p>
                     </div>
-                    <div class="service"><img src="assets/about/comunidad.png" alt="Comunidad comprometida">
+                    <div className="service"><img src="src/assets/about/comunidad.png" alt="Comunidad comprometida">
                         <h3>Comunidad comprometida</h3>
                         <p>Fomentamos un espacio donde las personas pueden vender, donar o comprar productos.</p>
                     </div>
                 </section>
 
-                <section class="team fade-in">
+                <section className="team fade-in">
                     <h2>EL EQUIPO DETRÁS DE ESTE PROYECTO</h2>
-                    <div class="team-members">
-                        <div class="member feature fade-in">
-                            <div class="circle">
-                                <img src="assets/about/ezequiel.jpg" alt="Foto de Ezequiel">
+                    <div className="team-members">
+                        <div className="member feature fade-in">
+                            <div className="circle">
+                                <img src="src/assets/about/ezequiel.jpg" alt="Foto de Ezequiel">
                             </div>
                             <p>Ezequiel Vallejos</p>
                         </div>
-                        <div class="member feature fade-in">
-                            <div class="circle">
-                                <img src="assets/about/aldana.jpg" alt="Foto de Aldana">
+                        <div className="member feature fade-in">
+                            <div className="circle">
+                                <img src="src/assets/about/aldana.jpg" alt="Foto de Aldana">
                             </div>
                             <p>Aldana Rolon</p>
                         </div>
-                        <div class="member feature fade-in">
-                            <div class="circle">
-                                <img src="assets/about/julieta.jpg" alt="Foto de Julieta">
+                        <div className="member feature fade-in">
+                            <div className="circle">
+                                <img src="src/assets/about/julieta.jpg" alt="Foto de Julieta">
                             </div>
                             <p>Julieta Ojeda</p>
                         </div>
-                        <div class="member feature fade-in">
-                            <div class="circle">
-                                <img src="assets/about/axel.jpg" alt="Foto de Axel">
+                        <div className="member feature fade-in">
+                            <div className="circle">
+                                <img src="src/assets/about/axel.jpg" alt="Foto de Axel">
                             </div>
                             <p>Axel Appella</p>
                         </div>
-                        <div class="member feature fade-in">
-                            <div class="circle">
-                                <img src="assets/about/leandro.jpg" alt="Foto de Leandro">
+                        <div className="member feature fade-in">
+                            <div className="circle">
+                                <img src="src/assets/about/leandro.jpg" alt="Foto de Leandro">
                             </div>
                             <p>Leandro Viscolungo</p>
                         </div>
-                        <div class="member feature fade-in">
-                            <div class="circle">
-                                <img src="assets/about/tamara.jpg" alt="Foto de Tamara">
+                        <div className="member feature fade-in">
+                            <div className="circle">
+                                <img src="src/assets/about/tamara.jpg" alt="Foto de Tamara">
                             </div>
                             <p>Tamara Vera</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="statistics fade-in">
+                <section className="statistics fade-in">
                     <h2>DATOS Y ESTADÍSTICAS QUE DEMUESTRAN UN MUNDO MÁS VERDE</h2>
-                    <div class="stats-container">
-                        <div class="stat-item">
-                            <img src="assets/about/rueda.png" alt="Reciclaje de neumáticos">
+                    <div className="stats-container">
+                        <div className="stat-item">
+                            <img src="src/assets/about/rueda.png" alt="Reciclaje de neumáticos">
                                 <h3 id="stat1">150000</h3>
                                 <p><strong>Neumáticos reciclados por año</strong> <br> a través de la reutilización de caucho.</p>
                         </div>
-                        <div class="stat-item">
-                            <img src="assets/about/agua.png" alt="Ahorro de agua">
+                        <div className="stat-item">
+                            <img src="src/assets/about/agua.png" alt="Ahorro de agua">
                                 <h3 id="stat2">4.5 mil millones</h3>
                                 <p><strong>Litros de agua ahorrados</strong> <br> en la producción de nuevas prendas.</p>
                         </div>
-                        <div class="stat-item">
-                            <img src="assets/about/vertedero.png" alt="Impacto ambiental">
+                        <div className="stat-item">
+                            <img src="src/assets/about/vertedero.png" alt="Impacto ambiental">
                                 <h3 id="stat3">20 millones</h3>
                                 <p><strong>Toneladas de residuos</strong> <br> NO terminaron en vertederos.</p>
                         </div>
-                        <div class="stat-item">
-                            <img src="assets/about/co2.png" alt="C02 reducido">
+                        <div className="stat-item">
+                            <img src="src/assets/about/co2.png" alt="C02 reducido">
                                 <h3 id="stat4">70</h3>
                                 <p><strong>CO2 reducido</strong> <br> en la producción de nuevas prendas.</p>
                         </div>
