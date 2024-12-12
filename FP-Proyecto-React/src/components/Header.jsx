@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const topBarButton = document.querySelector('.top-bar button');
@@ -11,7 +14,9 @@ const Header = () => {
       topBar.style.display = 'none';
     };
 
-    topBarButton.addEventListener('click', handleClick);
+    if (topBarButton) {
+      topBarButton.addEventListener('click', handleClick);
+    }
 
     const handleResize = () => {
       setShowMobileMenu(false);
@@ -20,13 +25,20 @@ const Header = () => {
     window.addEventListener('resize', handleResize);
 
     return () => {
-      topBarButton.removeEventListener('click', handleClick);
+      if (topBarButton) {
+        topBarButton.removeEventListener('click', handleClick);
+      }
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
+  if (location.pathname === '/get-started') {
+    return null; // Don't render the footer at all on the /get-started page
+  }
+
   return (
-    <header>
+
+    <header className={location.pathname === '/about' ? 'bg-[#e3f2fd] p-5' : ''}>
       {/* Top Bar */}
       <div className="top-bar flex justify-between items-center bg-[#006C2E] text-white px-4 h-[55px]">
         <div className="w-full text-center">
@@ -38,13 +50,11 @@ const Header = () => {
       {/* Main Navigation */}
       <nav>
         <div className="flex justify-between items-center p-4 bg-white">
-
-          <div className='flex w-full gap-5 items-center'>
-
+          <div className="flex w-full gap-5 items-center">
             {/* Logo */}
             <div className="h-10 md:h-6">
               <img
-                src="src/assets/navegation/ecodono-logo.png"
+                src="/src/assets/navegation/ecodono-logo.png"
                 alt="ECODONO Logo"
                 className="h-full"
               />
@@ -52,10 +62,10 @@ const Header = () => {
 
             {/* Desktop Navigation Links */}
             <ul className="hidden lg:flex lg:flex-row lg:gap-5 list-none m-0 p-0">
-              <li><a href="index.html" className="no-underline text-black hover:text-[#F1702A] text-[15px] transition-colors whitespace-nowrap">Home</a></li>
-              <li><a href="catalogo.html" className="no-underline text-black hover:text-[#F1702A] text-[15px] transition-colors whitespace-nowrap">Productos</a></li>
+              <li><Link to="/home" className="no-underline text-black hover:text-[#F1702A] text-[15px] transition-colors whitespace-nowrap">Home</Link></li>
+              <li><Link to="/catalog" className="no-underline text-black hover:text-[#F1702A] text-[15px] transition-colors whitespace-nowrap">Productos</Link></li>
               <li><a href="#" className="no-underline text-black hover:text-[#F1702A] text-[15px] transition-colors whitespace-nowrap">Servicios</a></li>
-              <li><a href="#" className="no-underline text-black hover:text-[#F1702A] text-[15px] transition-colors whitespace-nowrap">About us</a></li>
+              <li><Link to="/about" className="no-underline text-black hover:text-[#F1702A] text-[15px] transition-colors whitespace-nowrap">About us</Link></li>
             </ul>
 
             {/* Search Bar */}
@@ -66,32 +76,36 @@ const Header = () => {
                 className="flex-grow border-none bg-transparent outline-none p-1 md:w-26"
               />
               <button className="bg-transparent border-none cursor-pointer p-0">
-                <img src="src/assets/navegation/lupa.png" alt="Buscar" className="h-5" />
+                <img src="/src/assets/navegation/lupa.png" alt="Buscar" className="h-5" />
               </button>
             </div>
 
           </div>
 
-          <div className='flex'>
+          <div className="flex">
             {/* Desktop Buttons */}
             <div className="hidden md:flex md:flex-nowrap md:justify-end md:gap-3 md:items-center">
-              <button className="bg-[#fb923c] px-5 py-2 rounded-full text-white cursor-pointer text-sm border border-black">
-                Registrarse
-              </button>
-              <button className="bg-[#047857] px-5 py-2 rounded-full text-white cursor-pointer text-sm whitespace-nowrap border border-black">
+              <Link
+                to="/get-started"
+                className="bg-[#ff6f3d] px-5 py-2 rounded-full text-white cursor-pointer text-sm border border-black whitespace-nowrap"
+                style={{ border: '1px solid black' }}
+              >
                 Iniciar Sesión
-              </button>
-              <img
-                src="src/assets/navegation/carrito.svg"
-                alt="Carrito"
-                className="h-9 cursor-pointer"
-              />
+              </Link>
+              <Link to="/cart">
+                <img
+                  src="/src/assets/navegation/carrito.svg"
+                  alt="Carrito"
+                  className="w-9"
+                />
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <div
               className="text-3xl cursor-pointer pl-4 pt-1 lg:hidden"
-              onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+            >
               ☰
             </div>
           </div>
@@ -99,14 +113,14 @@ const Header = () => {
         </div>
 
         {/* mobile Search Bar */}
-        <div className="sm-450:hidden flex items-center bg-[#eafde6] rounded-full px-3 py-1 w-auto mx-3 mb-2">
+        <div className={`sm-450:hidden flex items-center bg-[#eafde6] rounded-full px-3 py-1 w-auto mx-3 mb-3 ${location.pathname === '/about' ? 'mt-5' : ''}`}>
           <input
             type="text"
             placeholder="Buscar productos..."
             className="flex-grow border-none bg-transparent outline-none p-1 md:w-26"
           />
           <button className="bg-transparent border-none cursor-pointer p-0">
-            <img src="src/assets/navegation/lupa.png" alt="Buscar" className="h-5" />
+            <img src="/src/assets/navegation/lupa.png" alt="Buscar" className="h-5" />
           </button>
         </div>
 
@@ -114,26 +128,27 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <ul className={`list-none m-0 p-0 w-full ${showMobileMenu ? 'flex flex-col items-end' : 'hidden'}`}>
-        <li className="my-2 pr-4"><a href="index.html" className="no-underline text-black hover:text-[#F1702A] text-base">Home</a></li>
-        <li className="my-2 pr-4"><a href="catalogo.html" className="no-underline text-black hover:text-[#F1702A] text-base">Productos</a></li>
+        <li className="my-2 pr-4"><Link to="/home" className="no-underline text-black hover:text-[#F1702A] text-base">Home</Link></li>
+        <li className="my-2 pr-4"><Link to="/catalogo" className="no-underline text-black hover:text-[#F1702A] text-base">Productos</Link></li>
         <li className="my-2 pr-4"><a href="#" className="no-underline text-black hover:text-[#F1702A] text-base">Servicios</a></li>
-        <li className="my-2 pr-4"><a href="#" className="no-underline text-black hover:text-[#F1702A] text-base">About us</a></li>
+        <li className="my-2 pr-4"><Link to="/about" className="no-underline text-black hover:text-[#F1702A] text-base">About us</Link></li>
         <li className="md:hidden my-2 pr-4">
-          <button className="w-full bg-[#fb923c] px-5 py-2 rounded-full text-white cursor-pointer text-sm">
-            Registrarse
-          </button>
-        </li>
-        <li className="md:hidden my-2 pr-4">
-          <button className="w-full bg-[#047857] px-5 py-2 rounded-full text-white cursor-pointer text-sm">
+          <Link
+            to="/get-started"
+            className="bg-[#ff6f3d] px-5 py-2 rounded-full text-white cursor-pointer text-sm border border-black whitespace-nowrap"
+            style={{ border: '1px solid black' }}
+          >
             Iniciar Sesión
-          </button>
+          </Link>
         </li>
         <li className="md:hidden my-2 pr-[20px]">
-          <img
-            src="src/assets/navegation/carrito.svg"
-            alt="Carrito"
-            className="w-9"
-          />
+          <Link to="/cart">
+            <img
+              src="/src/assets/navegation/carrito.svg"
+              alt="Carrito"
+              className="w-9"
+            />
+          </Link>
         </li>
       </ul>
     </header>

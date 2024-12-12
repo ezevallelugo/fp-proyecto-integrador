@@ -1,0 +1,98 @@
+
+.form div .alerta{
+    width: 290px;
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    font-size: .8rem;
+}
+
+.inicio-mobile > .alertaE, 
+.inicio-mobile > .alertaR {
+    display: none;
+}
+.inicio-mobile .alertaR {
+    color: red;
+}
+.inicio-mobile .alertaE
+{
+    color: green;
+}
+.register-mobile > .alertaE,
+.register-mobile > .alertaR
+{
+    display: none;
+}
+.register-mobile .alertaR
+{
+  
+    color: red;
+}
+.register-mobile .alertaE
+{
+    color: green;
+}
+
+
+.register > .alerta-error,
+.register > .alerta-exito {
+    display: none;
+}
+.sign > .alerta-Error,
+.sign > .alerta-Exito {
+    display: none;
+}
+.register .alertaError{
+    display: block;
+    color: red;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+}
+.sign .alertaError{
+    display: block;
+    padding: .5rem 1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: .8rem;
+    color: red;
+}
+.sign .alertaExito {
+    display: block;
+    background-color: #0ca828;
+    padding: .5rem 1rem;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.register .alertaError{
+    display: block;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+    color: red;
+}
+.register .alertaExito {
+    display: block;
+    background-color: #0ca828;
+    padding: .5rem 1rem;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+
+.alerta {
+    color: red;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+    
+}
+.register .error {
+    border: solid 1px #9d2222;
+}
+.register label {
+    margin-bottom: 10px;  
+}
+

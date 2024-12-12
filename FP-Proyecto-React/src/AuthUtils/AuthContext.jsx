@@ -50,8 +50,8 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
     setIsAuthenticated(false);
 
-    if (location.pathname !== '/login' && location.pathname !== '/' && location.pathname !== '/home') {
-      navigate('/login', {
+    if (location.pathname !== '/checkout' && location.pathname !== '/cart' && location.pathname !== '/catalog' && location.pathname !== '/get-started' && location.pathname !== '/' && location.pathname !== '/home' && location.pathname !== '/about' && !location.pathname.startsWith('/products/')) {
+      navigate('/get-started', {
         replace: true,
         state: { from: location.pathname }
       });

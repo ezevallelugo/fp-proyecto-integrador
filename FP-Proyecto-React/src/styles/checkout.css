@@ -1,0 +1,259 @@
+.checkout h2 {
+    text-align: left;
+}
+
+.checkout input, .checkout select {
+    border: 3px solid #C4D1EB !important;
+    box-shadow: 3px 3px 2px 0px #E2E2E2;
+}
+
+.checkout input[type="number"]::-webkit-outer-spin-button,
+.checkout input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.payment_information input {
+    margin-top: 10px;
+}
+
+#payment_form {
+    width: 100%;
+}
+
+.payment {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item_group {
+    width: 45%;
+}
+
+.item_group_label {
+    width: 100%;
+    text-align: left;
+}
+
+.item_group_payment {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.item_group_last {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_group_last label {
+    text-align: left;
+}
+
+.direction input {
+    width: 190%;
+}
+
+.select {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.select select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    background-color: #FFFFFF;
+    border: 3px solid #C4D1EB;
+    border-radius: 20px;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 3px 3px 2px 0px #E2E2E2;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.select select:focus {
+    background: #F2F2F2;
+    border: 1px solid #5A7EC7;
+    border-radius: 5px;
+}
+
+.select::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 60%;
+    right: 10px;
+    transform: translate(0, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #000000;
+    clip-path: polygon(50% 80%, 0 20%, 100% 20%);
+}
+
+.expiration_date {
+    display: flex;
+    gap: 1em;
+}
+
+.expiration_date select {
+    width: 5em;
+}
+
+.cvv {
+    display: flex;
+    flex-direction: column;
+}
+
+.cvv_input {
+    display: flex;
+    justify-content: center;
+}
+
+.cvv_input input {
+    width: 50px;
+}
+
+.cvv_input span {
+    margin-top: 11px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.title_information_facturation {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.personal_data {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.personal_data label {
+    text-align: left;
+}
+
+#cvv,
+#card_number,
+.personal_data input {
+    border: 3px solid #C4D1EB;
+    color: #000000;
+    box-shadow: 3px 3px 2px 0px #E2E2E2;
+}
+
+.checkSaveInformation {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+}
+
+.checkSaveInformation label {
+    margin-top: 5px;
+}
+
+.checkSaveInformation input[type="checkbox"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: #82d251;
+    border: 2px solid #82d251;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkSaveInformation input[type="checkbox"]:checked::before {
+    content: "✓";
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    position: absolute;
+    top: -2px;
+    left: 4px;
+}
+
+.checkSaveInformation label {
+    margin-left: 8px;
+}
+
+.container_buttonPay {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.buttonPay {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente el ícono y el texto */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    width: 35%;
+    padding: 10px 20px;
+    background-color: #067F38;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    gap: 8px;
+    /* Espacio entre el ícono y el texto */
+}
+
+.buttonPay:hover {
+    background-color: #45a049;
+}
+
+.buttonPay:active {
+    background-color: #3e8e41;
+}
+
+.buttonPay img {
+    height: 2em;
+    width: auto;
+}
+
+.payment_information_container {
+    padding: 5% !important;
+}
+
+.payment_information_container,
+.payment_method_container {
+    background-color: #eafde6;
+    width: 100%;
+    max-width: 600px;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.payment_methods_logos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.payment_methods_logos img[alt="Tarjeta Shopping"] {
+    width: 60px;
+}
+
+.payment_methods_logos img[alt="Mercado Pago"],
+.payment_methods_logos img[alt="Paypal"] {
+    width: 100px;
+}
+
+.icon {
+    width: auto;
+    height: 50px;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
