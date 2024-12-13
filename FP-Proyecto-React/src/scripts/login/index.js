@@ -11,16 +11,6 @@ function toggleForm() {
     }
 }
 
-/* function login() {
-    // Aquí puedes agregar la lógica para iniciar sesión
-    alert('Iniciar Sesión');
-}
- */
-/* function register() {
-    // Aquí puedes agregar la lógica para registrarse
-    alert('Registrarse');
-} */
-
 // Nueva función para manejar el cambio de tamaño de la ventana
 function handleResize() {
     var loginContainer = document.getElementById('login-container');
