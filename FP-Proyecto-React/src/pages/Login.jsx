@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [htmlContent, setHtmlContent] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadHTML = async () => {
       try {
-        // Use import.meta.url to get the correct path
         const response = await fetch(new URL('../login.html', import.meta.url).href);
         const data = await response.text();
         setHtmlContent(data);
@@ -33,8 +34,20 @@ const Login = () => {
         newScript.defer = true;
         document.body.appendChild(newScript);
       });
+
+      // Add event listener for successful login
+      const handleLoginSuccess = () => {
+        navigate('/catalog');
+      };
+
+      window.addEventListener('loginSuccess', handleLoginSuccess);
+
+      // Cleanup event listener
+      return () => {
+        window.removeEventListener('loginSuccess', handleLoginSuccess);
+      };
     }
-  }, [htmlContent]);
+  }, [htmlContent, navigate]);
 
   return (
     <div 
