@@ -54,7 +54,7 @@ const Header = () => {
             {/* Logo */}
             <div className="h-10 md:h-6">
               <img
-                src="/src/assets/navegation/ecodono-logo.png"
+                src="/assets/navegation/ecodono-logo.png"
                 alt="ECODONO Logo"
                 className="h-full"
               />
@@ -76,7 +76,7 @@ const Header = () => {
                 className="flex-grow border-none bg-transparent outline-none p-1 md:w-26"
               />
               <button className="bg-transparent border-none cursor-pointer p-0">
-                <img src="/src/assets/navegation/lupa.png" alt="Buscar" className="h-5" />
+                <img src="/assets/navegation/lupa.png" alt="Buscar" className="h-5" />
               </button>
             </div>
 
@@ -94,7 +94,7 @@ const Header = () => {
               </Link>
               <Link to="/cart">
                 <img
-                  src="/src/assets/navegation/carrito.svg"
+                  src="/assets/navegation/carrito.svg"
                   alt="Carrito"
                   className="w-9"
                 />
@@ -120,7 +120,7 @@ const Header = () => {
             className="flex-grow border-none bg-transparent outline-none p-1 md:w-26"
           />
           <button className="bg-transparent border-none cursor-pointer p-0">
-            <img src="/src/assets/navegation/lupa.png" alt="Buscar" className="h-5" />
+            <img src="/assets/navegation/lupa.png" alt="Buscar" className="h-5" />
           </button>
         </div>
 
@@ -144,7 +144,7 @@ const Header = () => {
         <li className="md:hidden my-2 pr-[20px]">
           <Link to="/cart">
             <img
-              src="/src/assets/navegation/carrito.svg"
+              src="/assets/navegation/carrito.svg"
               alt="Carrito"
               className="w-9"
             />

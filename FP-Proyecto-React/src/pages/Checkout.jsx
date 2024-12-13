@@ -278,7 +278,7 @@ export default function Checkout() {
             {/* Pay Button */}
             <div className="text-center h-[39px]">
               <Link href="#" className="display-flex align-items-center justify-center w-[35%] px-6 py-3 rounded-full bg-[#067F38] text-white font-bold text-[15px] border-none cursor-pointer gap-8">
-                <img src="/src/assets/payment_methods/icon-block.png" className="h-6 w-auto mr-2" style={{position: 'relative', top: '16%'}} />
+                <img src="/assets/payment_methods/icon-block.png" className="h-6 w-auto mr-2" style={{position: 'relative', top: '16%'}} />
                 Pagar Ahora
               </Link>
             </div>
@@ -294,27 +294,27 @@ export default function Checkout() {
           <div className="flex gap-4 flex-wrap items-center justify-center">
             <img
               className="h-[50px] object-contain"
-              src="/src/assets/payment_methods/visa.png"
+              src="/assets/payment_methods/visa.png"
               alt="Visa"
             />
             <img
               className="h-[50px] object-contain"
-              src="/src/assets/payment_methods/mastercard.png"
+              src="/assets/payment_methods/mastercard.png"
               alt="Mastercard"
             />
             <img
               className="h-[30px] object-contain"
-              src="/src/assets/payment_methods/tarjetashopping.png"
+              src="/assets/payment_methods/tarjetashopping.png"
               alt="Tarjeta Shopping"
             />
             <img
               className="h-[30px] object-contain"
-              src="/src/assets/payment_methods/mercadopago.png"
+              src="/assets/payment_methods/mercadopago.png"
               alt="Mercado Pago"
             />
             <img
               className="h-[30px] object-contain"
-              src="/src/assets/payment_methods/paypal.png"
+              src="/assets/payment_methods/paypal.png"
               alt="Paypal"
             />
           </div>

@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       screens: {
         "sm-450": "450px",
+        "sm-631": "631px",
         "sm-658": "658px",
         "sm-690": "690px",
       },

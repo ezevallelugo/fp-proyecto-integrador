@@ -20,13 +20,13 @@ const Footer = () => {
         </div>
         <div className="footer-content">
           <div className="footer-logo">
-            <img src="/src/assets/footer/ecodono-logo.png" alt="ECODONO Logo" />
+            <img src="/assets/footer/ecodono-logo.png" alt="ECODONO Logo" />
             <p>Reutilizamos productos para darles un nuevo uso y ofrecemos servicios para aportar un cuidado especial a nuestro planeta.</p>
             <div className="social-icons">
-              <a href="#"><img src="/src/assets/footer/twitter-svgrepo-com.svg" alt="Twitter" /></a>
-              <a href="#"><img src="/src/assets/footer/facebook-svgrepo-com.svg" alt="Facebook" /></a>
-              <a href="#"><img src="/src/assets/footer/instagram-svgrepo-com.svg" alt="Instagram" /></a>
-              <a href="#"><img src="/src/assets/footer/github-outline-svgrepo-com.svg" alt="GitHub" /></a>
+              <a href="#"><img src="/assets/footer/twitter-svgrepo-com.svg" alt="Twitter" /></a>
+              <a href="#"><img src="/assets/footer/facebook-svgrepo-com.svg" alt="Facebook" /></a>
+              <a href="#"><img src="/assets/footer/instagram-svgrepo-com.svg" alt="Instagram" /></a>
+              <a href="#"><img src="/assets/footer/github-outline-svgrepo-com.svg" alt="GitHub" /></a>
             </div>
           </div>
           <div className="footer-links">
@@ -59,21 +59,21 @@ const Footer = () => {
             </div>
           </div>
           <div className="payment-methods-small">
-            <img src="/src/assets/footer/visa-svgrepo-com.svg" alt="Visa" />
-            <img src="/src/assets/footer/mastercard-full-svgrepo-com.svg" alt="MasterCard" />
-            <img src="/src/assets/footer/paypal-svgrepo-com.svg" alt="PayPal" />
-            <img src="/src/assets/footer/apple-pay-svgrepo-com.svg" alt="Apple Pay" />
-            <img src="/src/assets/footer/google-pay-svgrepo-com.svg" alt="Google Pay" />
+            <img src="/assets/footer/visa-svgrepo-com.svg" alt="Visa" />
+            <img src="/assets/footer/mastercard-full-svgrepo-com.svg" alt="MasterCard" />
+            <img src="/assets/footer/paypal-svgrepo-com.svg" alt="PayPal" />
+            <img src="/assets/footer/apple-pay-svgrepo-com.svg" alt="Apple Pay" />
+            <img src="/assets/footer/google-pay-svgrepo-com.svg" alt="Google Pay" />
           </div>
         </div>
         <div className="footer-bottom">
           <p>© 2024 ECODONO, Todos los derechos reservados</p>
           <div className="payment-methods">
-            <img src="/src/assets/footer/visa-svgrepo-com.svg" alt="Visa" />
-            <img src="/src/assets/footer/mastercard-full-svgrepo-com.svg" alt="MasterCard" />
-            <img src="/src/assets/footer/paypal-svgrepo-com.svg" alt="PayPal" />
-            <img src="/src/assets/footer/apple-pay-svgrepo-com.svg" alt="Apple Pay" />
-            <img src="/src/assets/footer/google-pay-svgrepo-com.svg" alt="Google Pay" />
+            <img src="/assets/footer/visa-svgrepo-com.svg" alt="Visa" />
+            <img src="/assets/footer/mastercard-full-svgrepo-com.svg" alt="MasterCard" />
+            <img src="/assets/footer/paypal-svgrepo-com.svg" alt="PayPal" />
+            <img src="/assets/footer/apple-pay-svgrepo-com.svg" alt="Apple Pay" />
+            <img src="/assets/footer/google-pay-svgrepo-com.svg" alt="Google Pay" />
           </div>
         </div>
       </div>

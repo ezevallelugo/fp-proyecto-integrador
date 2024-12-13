@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 // Import your images (adjust paths as needed)
-import remera2 from '/src/assets/product/remera-2.png';
-import remera3 from '/src/assets/product/remera-3.png';
-import remera4 from '/src/assets/product/remera-4.png';
-import remera1 from '/src/assets/product/remera-1.png';
-import remeraVerde from '/src/assets/product/remera-verde.png';
-import maletin from '/src/assets/product/maletin.png';
-import remeraAzul from '/src/assets/product/remera-azul.png';
-import zapatillas from '/src/assets/product/zapatillas.png';
+import remera2 from '/assets/product/remera-2.png';
+import remera3 from '/assets/product/remera-3.png';
+import remera4 from '/assets/product/remera-4.png';
+import remera1 from '/assets/product/remera-1.png';
+import remeraVerde from '/assets/product/remera-verde.png';
+import maletin from '/assets/product/maletin.png';
+import remeraAzul from '/assets/product/remera-azul.png';
+import zapatillas from '/assets/product/zapatillas.png';
 
 // Mock product database (replace with actual API or database)
 const PRODUCT_DATABASE = {

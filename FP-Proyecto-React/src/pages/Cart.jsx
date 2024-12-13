@@ -10,7 +10,7 @@ const initialCartItems = [
         name: 'Remera',
         price: 15000,
         quantity: 1,
-        image: '/src/assets/product/remera-1.png'
+        image: '/assets/product/remera-1.png'
     }
 ];
 

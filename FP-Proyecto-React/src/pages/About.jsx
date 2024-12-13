@@ -83,7 +83,7 @@ export default function About() {
             <div className="container-first">
                 <div className="first-box fade-in">
                     <div className="logo-first">
-                        <img src="src/assets/about/logo-completo.png" alt="Logo Ecodono"/>
+                        <img src="/assets/about/logo-completo.png" alt="Logo Ecodono"/>
                     </div>
                     <h1>¿QUIÉNES SOMOS?</h1>
                     <p>Somos una plataforma dedicada a impulsar la economía circular, ofreciendo un espacio donde las personas pueden <strong>comprar, vender, reciclar</strong> y dar nueva vida a productos de segunda mano. Creemos en el poder de la <strong>reutilización</strong> y el <strong>upcycling</strong> para reducir el impacto ambiental y crear un cambio positivo.</p>
@@ -93,15 +93,15 @@ export default function About() {
 
             <section className="features">
                 <div className="feature fade-in">
-                    <img src="src/assets/about/mundo.png" alt="Reciclaje"/>
+                    <img src="/assets/about/mundo.png" alt="Reciclaje"/>
                     <p>Promovemos el reciclaje y reutilización para reducir el impacto ambiental.</p>
                 </div>
                 <div className="feature fade-in">
-                    <img src="src/assets/about/simbolo.png" alt="Conectar personas"/>
+                    <img src="/assets/about/simbolo.png" alt="Conectar personas"/>
                     <p>Conectando personas para un futuro sostenible.</p>
                 </div>
                 <div className="feature fade-in">
-                    <img src="src/assets/about/bote.png" alt="Soluciones sustentables"/>
+                    <img src="/assets/about/bote.png" alt="Soluciones sustentables"/>
                     <p>Inspirando soluciones sustentables para un mundo mejor.</p>
                 </div>
             </section>
@@ -117,17 +117,17 @@ export default function About() {
             <section className="services fade-in">
                 <h2>¿QUÉ OFRECEMOS?</h2>
                 <div className="service">
-                    <img src="src/assets/about/economia.png" alt="Economía circular real"/>
+                    <img src="/assets/about/economia.png" alt="Economía circular real"/>
                     <h3>Economía circular <br /> real</h3>
                     <p>Integramos reciclaje y upcycling, transformando productos en desuso en algo nuevo.</p>
                 </div>
                 <div className="service">
-                    <img src="src/assets/about/reduccion.png" alt="Reducción del desperdicio"/>
+                    <img src="/assets/about/reduccion.png" alt="Reducción del desperdicio"/>
                     <h3>Reducción del desperdicio</h3>
                     <p>Reciclamos materiales como plástico, goma y textiles para crear productos útiles.</p>
                 </div>
                 <div className="service">
-                    <img src="src/assets/about/comunidad.png" alt="Comunidad comprometida"/>
+                    <img src="/assets/about/comunidad.png" alt="Comunidad comprometida"/>
                     <h3>Comunidad comprometida</h3>
                     <p>Fomentamos un espacio donde las personas pueden vender, donar o comprar productos.</p>
                 </div>
@@ -141,7 +141,7 @@ export default function About() {
                         <div key={name} className="member feature fade-in">
                             <div className="circle">
                                 <img 
-                                    src={`src/assets/about/${name.split(' ')[0].toLowerCase()}.jpg`} 
+                                    src={`/assets/about/${name.split(' ')[0].toLowerCase()}.jpg`} 
                                     alt={`Foto de ${name}`}
                                 />
                             </div>
@@ -155,22 +155,22 @@ export default function About() {
                 <h2>DATOS Y ESTADÍSTICAS QUE DEMUESTRAN UN MUNDO MÁS VERDE</h2>
                 <div className="stats-container">
                     <div className="stat-item">
-                        <img src="src/assets/about/rueda.png" alt="Reciclaje de neumáticos"/>
+                        <img src="/assets/about/rueda.png" alt="Reciclaje de neumáticos"/>
                         <h3 id="stat150000">0</h3>
                         <p><strong>Neumáticos reciclados por año</strong> <br /> a través de la reutilización de caucho.</p>
                     </div>
                     <div className="stat-item">
-                        <img src="src/assets/about/agua.png" alt="Ahorro de agua"/>
+                        <img src="/assets/about/agua.png" alt="Ahorro de agua"/>
                         <h3 id="stat4500000000">0</h3>
                         <p><strong>Litros de agua ahorrados</strong> <br /> en la producción de nuevas prendas.</p>
                     </div>
                     <div className="stat-item">
-                        <img src="src/assets/about/vertedero.png" alt="Impacto ambiental"/>
+                        <img src="/assets/about/vertedero.png" alt="Impacto ambiental"/>
                         <h3 id="stat20000000">0</h3>
                         <p><strong>Toneladas de residuos</strong> <br /> NO terminaron en vertederos.</p>
                     </div>
                     <div className="stat-item">
-                        <img src="src/assets/about/co2.png" alt="C02 reducido"/>
+                        <img src="/assets/about/co2.png" alt="C02 reducido"/>
                         <h3 id="stat70">0</h3>
                         <p><strong>CO2 reducido</strong> <br /> en la producción de nuevas prendas.</p>
                     </div>

@@ -3,16 +3,16 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Product data
 const products = [
-    { id: 1, name: "Remera Vent Verde", price: 15000, originalPrice: 20000, img: "src/assets/catalog/remera-1.png", link: "producto.html", category: "remeras", materials: ["algodon"] },
-    { id: 2, name: "Bolso CICA Neumático negro", price: 35000, img: "src/assets/catalog/bolso.png", link: "producto.html", category: "accesorios", materials: ["camaras"] },
-    { id: 3, name: "Jerséi de lana reciclada", price: 25000, originalPrice: 32000, img: "src/assets/catalog/jersei.png", link: "producto.html", category: "remeras", materials: ["lana"] },
-    { id: 4, name: "Sneaker Spandau Navy Man", price: 30000, img: "src/assets/catalog/zapatillas-1.png", link: "producto.html", category: "calzado", materials: ["poliester"] },
-    { id: 5, name: "Pantalones Cargo Ethica Azules", price: 27000, originalPrice: 33000, img: "src/assets/catalog/pantalones.png", link: "producto.html", category: "pantalones", materials: ["algodon", "poliester"] },
-    { id: 6, name: "Remera azul", price: 15000, img: "src/assets/catalog/remera-azul.png", link: "producto.html", category: "remeras", materials: ["algodon"] },
-    { id: 7, name: "Camiseta Francisca blanca", price: 15000, originalPrice: 19000, img: "src/assets/catalog/musculosa.png", link: "producto.html", category: "remeras", materials: ["algodon"] },
-    { id: 8, name: "Sneaker Corsocomo Woman", price: 30000, originalPrice: 38000, img: "src/assets/catalog/zapatillas-2.png", link: "producto.html", category: "calzado", materials: ["poliester"] },
-    { id: 9, name: "Bandolera Frodo L", price: 30000, img: "src/assets/catalog/bandolera.png", link: "producto.html", category: "accesorios", materials: ["camaras"] },
-    { id: 10, name: "Pantalones cortos Beige", price: 20000, originalPrice: 25000, img: "src/assets/catalog/bermuda.png", link: "producto.html", category: "pantalones", materials: ["algodon", "lana"] },
+    { id: 1, name: "Remera Vent Verde", price: 15000, originalPrice: 20000, img: "/assets/catalog/remera-1.png", link: "producto.html", category: "remeras", materials: ["algodon"] },
+    { id: 2, name: "Bolso CICA Neumático negro", price: 35000, img: "/assets/catalog/bolso.png", link: "producto.html", category: "accesorios", materials: ["camaras"] },
+    { id: 3, name: "Jerséi de lana reciclada", price: 25000, originalPrice: 32000, img: "/assets/catalog/jersei.png", link: "producto.html", category: "remeras", materials: ["lana"] },
+    { id: 4, name: "Sneaker Spandau Navy Man", price: 30000, img: "/assets/catalog/zapatillas-1.png", link: "producto.html", category: "calzado", materials: ["poliester"] },
+    { id: 5, name: "Pantalones Cargo Ethica Azules", price: 27000, originalPrice: 33000, img: "/assets/catalog/pantalones.png", link: "producto.html", category: "pantalones", materials: ["algodon", "poliester"] },
+    { id: 6, name: "Remera azul", price: 15000, img: "/assets/catalog/remera-azul.png", link: "producto.html", category: "remeras", materials: ["algodon"] },
+    { id: 7, name: "Camiseta Francisca blanca", price: 15000, originalPrice: 19000, img: "/assets/catalog/musculosa.png", link: "producto.html", category: "remeras", materials: ["algodon"] },
+    { id: 8, name: "Sneaker Corsocomo Woman", price: 30000, originalPrice: 38000, img: "/assets/catalog/zapatillas-2.png", link: "producto.html", category: "calzado", materials: ["poliester"] },
+    { id: 9, name: "Bandolera Frodo L", price: 30000, img: "/assets/catalog/bandolera.png", link: "producto.html", category: "accesorios", materials: ["camaras"] },
+    { id: 10, name: "Pantalones cortos Beige", price: 20000, originalPrice: 25000, img: "/assets/catalog/bermuda.png", link: "producto.html", category: "pantalones", materials: ["algodon", "lana"] },
 ];
 
 const ITEMS_PER_PAGE = 9;
