@@ -317,7 +317,7 @@ export default function Login() {
           <div className="overlay-container">
             <div className="overlay">
               <div className="overlay-left">
-                <h1>¡Bienvenido de vuelta!</h1>
+                <h1>¡Bienvenido nuevamente!</h1>
                 <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
                 <button
                   id="signIn"
@@ -328,7 +328,7 @@ export default function Login() {
               </div>
 
               <div className="overlay-right">
-                <h1>¡Hola, Amigo!</h1>
+                <h1>¡Hola!</h1>
                 <p>Regístrese con su información personal para comenzar este viaje con nosotros</p>
                 <button
                   id="signUp"
