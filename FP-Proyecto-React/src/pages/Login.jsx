@@ -1,11 +1,15 @@
 import "../styles/login/loginDefault.css";
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGooglePlusG, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
 // Utility function for form validation
 const useFormValidation = (initialState, validationRules) => {
   const [values, setValues] = useState(initialState);
   const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
   const [isValid, setIsValid] = useState(false);
 
   const handleChange = (e) => {
@@ -13,11 +17,14 @@ const useFormValidation = (initialState, validationRules) => {
     const updatedValues = { ...values, [name]: value };
     setValues(updatedValues);
 
+    // Mark the field as touched
+    setTouched(prev => ({ ...prev, [name]: true }));
+
     // Validate each field
     const newErrors = {};
     Object.keys(validationRules).forEach(field => {
       const rule = validationRules[field];
-      if (!rule.regex.test(updatedValues[field])) {
+      if (touched[field] && !rule.regex.test(updatedValues[field])) {
         newErrors[field] = rule.message;
       }
     });
@@ -29,10 +36,11 @@ const useFormValidation = (initialState, validationRules) => {
   const resetForm = () => {
     setValues(initialState);
     setErrors({});
+    setTouched({});
     setIsValid(false);
   };
 
-  return { values, errors, isValid, handleChange, resetForm };
+  return { values, errors, isValid, handleChange, resetForm, touched };
 };
 
 // Login Component
@@ -58,7 +66,8 @@ const LoginForm = () => {
     errors,
     isValid,
     handleChange,
-    resetForm
+    resetForm,
+    touched
   } = useFormValidation(
     { userEmail: '', userPassword: '' },
     validationRules
@@ -66,6 +75,21 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!values.userEmail || !values.userPassword) {
+      setIsSuccess(false);
+      setShowAlert(true);
+
+      // Modificar el mensaje de error
+      errors.userEmail = !values.userEmail ? "Todos los campos son obligatorios" : errors.userEmail;
+      errors.userPassword = !values.userPassword ? "Todos los campos son obligatorios" : errors.userPassword;
+
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 3000);
+      return;
+    }
+
     if (isValid) {
       // Successful login logic
       setIsSuccess(true);
@@ -74,6 +98,7 @@ const LoginForm = () => {
 
       setTimeout(() => {
         setShowAlert(false);
+        navigate('/catalog');
       }, 3000);
 
       navigate('/catalog');
@@ -91,33 +116,44 @@ const LoginForm = () => {
   return (
     <form className="sign" onSubmit={handleSubmit}>
       <h1>Iniciar Sesión</h1>
-      <p>Ingresa tus credenciales</p>
-
+      <div className="social-container">
+        <a href="#" className="social"><FontAwesomeIcon icon={faFacebookF} size={"lg"} /></a>
+        <a href="#" className="social"><FontAwesomeIcon icon={faGooglePlusG} size={"lg"} /></a>
+        <a href="#" className="social"><FontAwesomeIcon icon={faLinkedinIn} size={"lg"} /></a>
+      </div>
+      <p>o usa tu cuenta</p>
       <label>
-        <i className="fas fa-envelope"></i>
+        <FontAwesomeIcon icon={faEnvelope} color="#a7a7a7" />
         <input
           type="email"
           name="userEmail"
           placeholder="Email"
           value={values.userEmail}
           onChange={handleChange}
-          className={errors.userEmail ? 'error' : ''}
+          className={errors.userEmail 
+            ? 'border border-solid border-[#9d2222] text-[#a7a7a7]' 
+            : 'text-[#a7a7a7]'
+          }
         />
       </label>
-      {errors.userEmail && <div className="alerta">{errors.userEmail}</div>}
+      {touched.userEmail && errors.userEmail && (
+        <div className="w-[290px] text-center sm:text-left rounded-[7px] mb-[10px] text-[0.8rem] text-red-600">
+          {errors.userEmail}
+        </div>
+      )}
 
       <label>
-        <i className="fas fa-lock"></i>
+        <FontAwesomeIcon icon={faLock} color="#a7a7a7" />
         <input
           type="password"
           name="userPassword"
           placeholder="Contraseña"
           value={values.userPassword}
           onChange={handleChange}
-          className={errors.userPassword ? 'error' : ''}
+          className={errors.userPassword ? 'error text-[#a7a7a7]' : 'text-[#a7a7a7]'}
         />
       </label>
-      {errors.userPassword && <div className="alerta">{errors.userPassword}</div>}
+      {touched.userPassword && errors.userPassword && <div className="alerta text-center sm:text-left">{errors.userPassword}</div>}
 
       <input
         type="submit"
@@ -125,8 +161,7 @@ const LoginForm = () => {
         className="iniciar-sesion"
       />
 
-      {showAlert && (
-        <div className={`alerta-${isSuccess ? 'Exito' : 'Error'}`}>
+      {showAlert && (  <div className={`    ${isSuccess ? 'bg-green-600' : 'text-red-600'}  w-full p-[0.5rem]  ${isSuccess ? 'text-white' : ''}  font-medium text-[0.8rem]  ${isSuccess ? 'mt-[10px]' : 'pb-0'} `}>
           {isSuccess ? 'Inicio de sesión exitoso' : 'Por favor, corrige los errores'}
         </div>
       )}
@@ -161,7 +196,8 @@ const RegisterForm = () => {
     errors,
     isValid,
     handleChange,
-    resetForm
+    resetForm,
+    touched
   } = useFormValidation(
     { userName: '', userEmail: '', userPassword: '' },
     validationRules
@@ -169,6 +205,22 @@ const RegisterForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!values.userName || !values.userEmail || !values.userPassword) {
+      setIsSuccess(false);
+      setShowAlert(true);
+
+      // Modificar los mensajes de error
+      errors.userName = !values.userName ? "Todos los campos son obligatorios" : errors.userName;
+      errors.userEmail = !values.userEmail ? "Todos los campos son obligatorios" : errors.userEmail;
+      errors.userPassword = !values.userPassword ? "Todos los campos son obligatorios" : errors.userPassword;
+
+      setTimeout(() => {
+        setShowAlert(false);
+      }, 3000);
+      return;
+    }
+
     if (isValid) {
       // Successful registration logic
       setIsSuccess(true);
@@ -191,57 +243,75 @@ const RegisterForm = () => {
   return (
     <form className="register" onSubmit={handleSubmit}>
       <h1>Crear Cuenta</h1>
-      <p>Registra tus datos</p>
+
+      <div className="social-container">
+        <a href="#" className="social"><FontAwesomeIcon icon={faFacebookF} size={"lg"} /></a>
+        <a href="#" className="social"><FontAwesomeIcon icon={faGooglePlusG} size={"lg"} /></a>
+        <a href="#" className="social"><FontAwesomeIcon icon={faLinkedinIn} size={"lg"} /></a>
+      </div>
 
       <label>
-        <i className="fas fa-user"></i>
+        <FontAwesomeIcon icon={faUser} color="#a7a7a7" />
         <input
           type="text"
           name="userName"
           placeholder="Nombre de usuario"
           value={values.userName}
           onChange={handleChange}
-          className={errors.userName ? 'error' : ''}
+          className={errors.userName 
+            ? 'border border-solid border-[#9d2222] text-[#a7a7a7]' 
+            : 'text-[#a7a7a7]'
+          }
         />
       </label>
-      {errors.userName && <div className="alerta">{errors.userName}</div>}
+      {touched.userName && errors.userName && (
+  <div className="w-[290px] text-center sm:text-left rounded-[7px] mb-[10px] text-[0.8rem] text-red-600">
+    {errors.userName}
+  </div>
+)}
 
       <label>
-        <i className="fas fa-envelope"></i>
+        <FontAwesomeIcon icon={faEnvelope} color="#a7a7a7" />
         <input
           type="email"
           name="userEmail"
           placeholder="Email"
           value={values.userEmail}
           onChange={handleChange}
-          className={errors.userEmail ? 'error' : ''}
+          className={errors.userEmail ? 'error text-[#a7a7a7]' : 'text-[#a7a7a7]'}
         />
       </label>
-      {errors.userEmail && <div className="alerta">{errors.userEmail}</div>}
+      {touched.userEmail && errors.userEmail && <div className="alerta text-center sm:text-left">{errors.userEmail}</div>}
 
       <label>
-        <i className="fas fa-lock"></i>
+        <FontAwesomeIcon icon={faLock} color="#a7a7a7" />
         <input
           type="password"
           name="userPassword"
           placeholder="Contraseña"
           value={values.userPassword}
           onChange={handleChange}
-          className={errors.userPassword ? 'error' : ''}
+          className={errors.userPassword ? 'error text-[#a7a7a7]' : 'text-[#a7a7a7]'}
         />
       </label>
-      {errors.userPassword && <div className="alerta">{errors.userPassword}</div>}
+      {touched.userPassword && errors.userPassword && <div className="alerta text-center sm:text-left">{errors.userPassword}</div>}
 
       <input
         type="submit"
         value="Registrarse"
       />
 
-      {showAlert && (
-        <div className={`alerta-${isSuccess ? 'exito' : 'error'}`}>
-          {isSuccess ? 'Registro exitoso' : 'Por favor, corrige los errores'}
-        </div>
-      )}
+{showAlert && (
+  <div className={`
+    ${isSuccess ? 'bg-green-600' : 'text-red-600'} 
+    w-full p-[0.5rem] 
+    ${isSuccess ? 'text-white' : ''} 
+    font-medium text-[0.8rem] 
+    mt-[10px]
+  `}>
+    {isSuccess ? 'Registro exitoso' : 'Por favor, corrige los errores'}
+  </div>
+)}
     </form>
   );
 };
@@ -317,8 +387,8 @@ export default function Login() {
           <div className="overlay-container">
             <div className="overlay">
               <div className="overlay-left">
-                <h1>¡Bienvenido nuevamente!</h1>
-                <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
+                <h1>¡Bienvenido!</h1>
+                <p>Para seguir ayudando a cuidar nuestro ambiente inicie sesion</p>
                 <button
                   id="signIn"
                   onClick={() => setIsRightPanelActive(false)}
@@ -328,8 +398,8 @@ export default function Login() {
               </div>
 
               <div className="overlay-right">
-                <h1>¡Hola!</h1>
-                <p>Regístrese con su información personal para comenzar este viaje con nosotros</p>
+                <h1>¡Bienvenido nuevamente!</h1>
+                <p>Para seguir ayudando a cuidar nuestro ambiente registrese</p>
                 <button
                   id="signUp"
                   onClick={() => setIsRightPanelActive(true)}
