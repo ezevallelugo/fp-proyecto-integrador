@@ -1,5 +1,6 @@
 import "../styles/login/loginDefault.css";
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Utility function for form validation
 const useFormValidation = (initialState, validationRules) => {
@@ -39,6 +40,8 @@ const LoginForm = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const navigate = useNavigate();
+
   const validationRules = {
     userEmail: {
       regex: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -72,6 +75,9 @@ const LoginForm = () => {
       setTimeout(() => {
         setShowAlert(false);
       }, 3000);
+
+      navigate('/catalog');
+
     } else {
       setIsSuccess(false);
       setShowAlert(true);

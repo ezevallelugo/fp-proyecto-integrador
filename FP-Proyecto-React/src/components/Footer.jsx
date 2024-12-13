@@ -26,7 +26,7 @@ const Footer = () => {
               <a href="#"><img src="/assets/footer/twitter-svgrepo-com.svg" alt="Twitter" /></a>
               <a href="#"><img src="/assets/footer/facebook-svgrepo-com.svg" alt="Facebook" /></a>
               <a href="#"><img src="/assets/footer/instagram-svgrepo-com.svg" alt="Instagram" /></a>
-              <a href="#"><img src="/assets/footer/github-outline-svgrepo-com.svg" alt="GitHub" /></a>
+              <a href="https://github.com/ezevallelugo/fp-proyecto-integrador.git"><img src="/assets/footer/github-outline-svgrepo-com.svg" alt="GitHub" /></a>
             </div>
           </div>
           <div className="footer-links">
